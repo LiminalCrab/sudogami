@@ -1,10 +1,12 @@
-# Hundred Rabbits
+# About
+This repository is a fork of [Hundred Rabbits](https://github.com/hundredrabbits/100r.co). It takes their C based wiki engine and adds Jinja2 to help templating and consistency across articles.
 
-This repository is the sources for the Hundred Rabbits website. The website is written in C, and requires `gcc` to build. To rebuild the site, go to `src` and run the build script:
+To use, 
 
-```
-./build.sh
-```
+run create_init.py in the root directory,
+edit your content in the src/inc folder, 
+run ./build.sh afterwards and you're good to go.
+
 
 ## Extras
 
