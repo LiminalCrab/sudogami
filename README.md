@@ -3,9 +3,18 @@ This repository is a fork of [Hundred Rabbits](https://github.com/hundredrabbits
 
 To use, 
 
-run create_init.py in the root directory,
-edit your content in the src/inc folder, 
+- run create_inc.py in the root directory,
+```
+python create_inc.py
+```
+add your article name, with no file extension and no spaces.
+
+edit the content for your article in the src/inc/articlename.htm
+
 run ./build.sh afterwards and you're good to go.
+```
+./build.sh
+```
 
 
 ## Extras
