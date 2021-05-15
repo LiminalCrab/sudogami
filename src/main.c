@@ -198,7 +198,7 @@ build(FILE *f, Lexicon *l, char *name, char *srcpath)
 		printf(">>> Building failed: %s\n", name);
 	fputs("</nav>", f);
 	/* main */
-	fputs("<main>\n\n", f);
+	//fputs("<main>\n\n", f);
 	fputs("<!-- Generated file, do not edit -->\n\n", f);
 	fprintf(f, "<h1>%s</h1>", name);
 	if(!fpinject(f, l, srcpath))
