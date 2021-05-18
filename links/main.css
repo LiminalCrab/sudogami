@@ -25,14 +25,16 @@
 
 .main-content > p{
     font-size: 14px;
+    letter-spacing: .2px;
+    line-height: 1.5em;
 }
 
-.main-content > a{
-    color: black;
+.main-content a{
+    color: rgb(119, 119, 119);
 }
 
-.main-content > a:visited{
-    color: black;
+.main-content a:visited{
+    color: rgb(119, 119, 119);
 }
 
 
