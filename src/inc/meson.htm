@@ -37,5 +37,10 @@
              13 bits with this value, [ <i> id += 564182 (64-41-13) </i> ]. Lastly Meson takes the value of our autoincrement sequence and cover the remaining bits. So if we have an ID of 1 for this table, which we take and mod by 1024 (so it fits in 10 bits)
          [ <i> id += (1 % 1024) </i> ], and now we have our unique ID.</span></p>
          <p><span>So Let's get to work and see if this math checks out, curious to see how stupidly difficult this is going to turn out to be.</span></p>
-		</div>
+         <p><span> [0516] I've made a mistake, unfortunately Object Identifier isn't going to work here as it's an identifier for Rows, not tables. My bad, looking for another solution.</span></p>
+         <center><p><img height="120px" src="../gallery/1_meson_test.png"></p></center>
+         <p><span>[0550] Checks out, that's a 64 bit generated Unique ID per the specifications, but the numbers I've provided it are all arbitrary meaning that the real work has yet to be done. 
+             The foundation is there though and it wasn't so bad. I still need to find a solution to Table ID's whether's built in to postgres or I have to make it myself, things to do... things to do. 
+            I still haven't fixed Auger's redirect loop. Guess that will have to be done after work at some point.</span></p>
+        </div>
 </div>
