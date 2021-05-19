@@ -38,6 +38,8 @@
     color: rgb(119, 119, 119);
 }
 
+/* WIKI STUFF */
+
 .wiki-content{
     line-height: 20px;
     min-width: 1000px;
@@ -57,11 +59,24 @@
     color: rgb(119, 119, 119);
 }
 
-.post{
-    font-size: 16px;
-    line-height: 20px;
+
+/* JOURNAL STUFF */
+.journal-list ul{
+    /*column-count: 3;*/
+    list-style-type: none;
+    line-height: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
+.journal-list a{
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    color: rgb(102, 102, 102);
+}
+
+/* GLOBALS */
 
 footer { line-height: 30px; clear:both; padding:45px; }
 footer hr { margin-bottom: 15px }
