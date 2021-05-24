@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><meta name='description' content='TODO'/><meta name='thumbnail' content='https://sudogami.commedia/services/thumbnail.jpg' /><meta name='viewport' content='width=device-width,initial-scale=1'><link rel='alternate' type='application/rss+xml' title='RSS Feed' href='../links/rss.xml' /><link rel='stylesheet' type='text/css' href='../links/main.css'><link rel='shortcut icon' type='image/png' href='../media/favico.png'><title>SUDOGAMI &mdash; sidg64</title></head><body><header><a href='home.html'><img src='../media/favico.svg' alt='SUDOGAMI' height='120'></a></header><nav></nav><!-- Generated file, do not edit -->
+
+<h1>sidg64</h1><div class="parent">
+	<div class="side-nav-menu">
+		<nav>
+			<section class="directory">
+			<h1>Directory</h1>
+				<ul>
+					<li><a href="home.html">Home</a></li>
+					<li><a href="journal.html">Journal</a></li>
+				</ul>
+			</section>
+            <section class="recent-entries">
+                <h1> Recent </h1>
+                <ul>
+                    <li><a href="c-lang.html">C [2021/05/19]</a></li>
+                    <li><a href="starlamp.html">Starlamp [2021/05/19]</a></li>
+                    <li><a href="sidg64.html"> sidg64 [2021/05/19]</a></li>
+                    <li><a href="initial.html"> Initial [2021/05/18]</a></li>
+                </ul>
+            </section>
+		</nav>
+	</div>
+	</body>
+	<main>
+        <div class="wiki-content">
+
+            <!-- OPTIONAL BANNER -->
+             <!-- <center><img src='../gallery/wiki-auger.png' alt='Auger' height='500px'></a></center> --> 
+             <h3>START sidg64 [2021/05/19 0200]</h3>
+             <p><span> Right, so it's time to start working on the foundation for this.
+                 All I want are a few source files to work from in the future because I need to get back to work on Starlamp. My intention is to use sidg64 and Starlamp together,
+             sidg64 will generate the unique ID's for postgres which will be used to identify pictures in the Starlamp gallery, and possibly create temporary links to otherwise inaccessible pictures. I could do learn to do this in SQL itself but I'm taking the opportunity to start learning C.</span></p>
+             <p><span>[0309]: Quickly made a make file and got a hello world up and running just to make sure I have everything I need.</span></p>
+             <p><span>[0333]: Permission problems with ZSH, I also noticed that Auger is stuck in a redirect loop so that's something I have to go fix, thanks Certbot.</span></p>
+             <p><span>[0340]: Solved, so we're looking for the ID's to be timesortable and 64 bits long. </span></p>
+             <p><span>[0346]: 41 bits time in miliseconds, 13 bits that represent the table's Object Identifier, 10 bits that are the auto-incrementing, modulus 1024. </span></p> <p><span>So here's what I'm looking at.
+                 There are 958104000000 miliseconds since the start of the Unix epoch at 1969/12/31 19:00:00 to the arbitrary date of 2000/05/12 00:00:00, sidg64 takes this value and fills the left-most 41 bits with it. 
+                 [ <i> id = 958104000000 (64-41) </i> ]. Next sidg64 gets the <a href="https://www.postgresql.org/docs/current/datatype-oid.html">Object Identifer</a> of the curent table in the database and fill the next
+             13 bits with this value, [ <i> id += 564182 (64-41-13) </i> ]. Lastly sidg64 takes the value of our autoincrement sequence and cover the remaining bits. So if we have an ID of 1 for this table, which we take and mod by 1024 (so it fits in 10 bits)
+         [ <i> id += (1 % 1024) </i> ], and now we have our unique ID.</span></p>
+         <p><span>So Let's get to work and see if this math checks out, curious to see how stupidly difficult this is going to turn out to be.</span></p>
+         <p><span> [0516] I've made a mistake, unfortunately Object Identifier isn't going to work here as it's an identifier for Rows, not tables. My bad, looking for another solution.</span></p>
+         <center><p><img height="120px" src="../gallery/1_meson_test.png"></p></center>
+         <p><span>[0550] Checks out, that's a 64 bit generated Unique ID per the specifications, but the numbers I've provided it are all arbitrary meaning that the real work has yet to be done. 
+             The foundation is there though and it wasn't so bad. I still need to find a solution to Table ID's whether's built in to postgres or I have to make it myself, things to do... things to do. 
+            I still haven't fixed Auger's redirect loop. Guess that will have to be done after work at some point.</span></p>
+        </div>
+</div>
+
+</main><footer><hr /><span style='float:right'>Edited on Mon May 24 01:33:07 2021
+ <a href='https://github.com/hundredrabbits/100r.co/edit/master/src/inc/sidg64.htm'>[edit]</a><br/></span><b>SUDOGAMI</b> © 2021 — Powered by <a href='https://github.com/hundredrabbits/100r.co'>100r</a> | LICENSE:  <a href='https://github.com/hundredrabbits/100r.co/blob/master/LICENSE.by-nc-sa-4.0.md' target='_blank'>BY-NC-SA 4.0</a></footer></body></html>
