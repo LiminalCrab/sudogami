@@ -32,6 +32,29 @@
 
                  If I feel truly lost, I'll go back to watching Harvard's CompSci 101 course. But for now, I'll take a crack at it the good old fashion way.
 
+                 <h3>CONTINUED [2021/05/24 1421]</h3>
+                 <p><span>I should've gone to bed hours go but instead I've spent much of my day dissecting the 100r wiki engine and reading the C specifications against syntax I didn't understand.
+                    Pointers have always deterred me from C, when I was younger I'd asked about them and the answer I've always received was "it points to an object in memory", which yeah that's correct
+                    but a better way to put it for a 16 year old would've been: It access the value of a separate piece of data. Or at least, for a noob, "it copies the value of another variable" would have 
+                    at least pointed me in the right direction. I think in that time it lead me to learning about the stack and the heap, which is good knowledge, and you definitely should know it, but not necessarily
+                    something a beginner really has to know at the time. It didn't get me anywhere. Anyway, pointers are no longer this terrifying behemoth of manual memory management. In fact, they're very interesting.
+                 </span></p>
+
+                 <p><span>I'll need to practice with them more, but the very simple gist is, you define one variable int [x = 1;], define another variable, call it [int *x_point;], and setup an indirect reference between x_point and x with an address operator. Like this.
+                     [x_point = &x;] and now you've assigned a pointer to variable x, and whatever value is indirectly assigned to x_link is now assigned to x.
+                     [y = *link_x;]. Output: y = 1;. I'm actually very eager to work with structs and linked lists, they seem to be a fun deviation from standard arrays, and setting them up is intriguing. Probably the most interesting thing I've learned of linked lists is that 
+                     members of a list don't have to be stored sequentially in memory, so you can access them from anywhere, they don't have to physically occur in any specific order. Definitely riding this pointer train now, wish I had put in more effort into learning C when I was younger.
+                     Another fascinating thing regarding linked lists is how you set them up for sequencing, it's so manual? I guess that word works. You have to assign a pointer to where the start of the list is kept, and for every structure afterwars you simply point to the next, and the next, and finally
+                     you terminate it with a null pointer. I love this concept, it feels like there's so much more to work with.
+                 </span></p>
+
+                 <p><span>Also a fun little note on function arguments using pointers: If a pointer is sent to the function as an argument, the value of the pointer is copied to the parameter. 
+                     but the function does not affect the pointer that was passed down into it. The catch is, the pointer cannot be changed by the function, but the elements that the pointer references
+                     can be. Neat little tid bit. I'm looking forward to diving into Dynamic Memory Allocation a bit later. Also learned a cool thing about compilers which explained the output of all the final executable object file. It's all pretty much just how the compiler parses machine code, these files are the byproduct of the assembler. After the compiler translates the program into object code,
+                     it searches for all the programs that are used in the source file and links them together. The final file is an executable .o file, (on windows it's a .exe). Good stuff. Anyway I'm spending the rest of tomorrow appending the 100r wiki engine to be a bit more verbose with directories. Or at least I'm going to try to. If I suck too much at this it might be better
+                     for me to rewrite it from scratch using 100r as reference. I'll probably learn a lot more that way.
+                 </span></p>
+
              </span></p>
         </div>
 </div>
