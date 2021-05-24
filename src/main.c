@@ -176,7 +176,7 @@ build(FILE *f, Lexicon *l, char *name, char *srcpath)
 	fprintf(f,
 		"<meta charset='utf-8'>"
 		"<meta name='description' content='%s'/>"
-		"<meta name='thumbnail' content='" DOMAIN "media/services/thumbnail.jpg' />"
+		"<meta name='thumbnail' content='" DOMAIN "/media/services/thumbnail.jpg' />"
 		"<meta name='viewport' content='width=device-width,initial-scale=1'>"
 		"<link rel='alternate' type='application/rss+xml' title='RSS Feed' "
 		"href='../links/rss.xml' />"
@@ -190,7 +190,7 @@ build(FILE *f, Lexicon *l, char *name, char *srcpath)
 	fputs("<body>", f);
 	/* header */
 	fputs("<header>", f);
-	fputs("<a href='home.html'><img src='../media/favico.svg' alt='" NAME "' height='120'></a>", f);
+	fputs("<a href='home.html'><img src='../media/favico.svg' class='centered' alt='" NAME "' height='120'></a>", f);
 	fputs("</header>", f);
 	/* nav */
 	fputs("<nav>", f);
