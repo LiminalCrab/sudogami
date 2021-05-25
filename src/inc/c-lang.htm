@@ -32,7 +32,7 @@
 
                  If I feel truly lost, I'll go back to watching Harvard's CompSci 101 course. But for now, I'll take a crack at it the good old fashion way.
 
-                 <h3>CONTINUED [2021/05/24 1421]</h3>
+                 <h3>CONTINUE pointers [2021/05/24 1421]</h3>
                  <p><span>I should've gone to bed hours go but instead I've spent much of my day dissecting the 100r wiki engine and reading the C specifications against syntax I didn't understand.
                     Pointers have always deterred me from C, when I was younger I'd asked about them and the answer I've always received was "it points to an object in memory", which yeah that's correct
                     but a better way to put it for a 16 year old would've been: It access the value of a separate piece of data. Or at least, for a noob, "it copies the value of another variable" would have 
@@ -55,6 +55,24 @@
                      for me to rewrite it from scratch using 100r as reference. I'll probably learn a lot more that way.
                  </span></p>
 
-             </span></p>
+                 <h3>CONTINUE dynamic memory allocation [2021/05/24 0316] </h3>
+                 <p><span> This was another thing that scared me about C growing up, the idea of having to keep track of your memory. How was somebody suppose to do that?
+                     I kind of imagined it like opening a hex editor and changing bits around, similar to how Assembly looks. It was an overwhelming idea so I just stuck with C#.
+                     Adventuring back to it, it's not so bad, the sizeof operator will help me in my journey, along with a lot of practice with calloc and malloc. I just need to keep in mind this important
+                     piece of information: <b>[1]</b> Malloc and Calloc are defined to return a pointer to void, and this pointer should be type cast to the appropriate pointer type.
+                 </span></p>
+            <p><span> <b>[1]</b> [ pnt = (int * ) malloc (50 * sizeof (int))] </span></p>
+            <p><span>In that example, the pointer type is type cast to an integer pointer and then assigned to the pnt variable. And now for something totally different.</span></p>
+
+            <h3> [0441] Main Function 24 </h3>            
+            <p><span> Main is the function called at program startup. It's implementation requires no parameters (prototypes), and it returns a data type of int. When parameters are used for the main function,
+                    they are often referred to as argc and argv, but any name may be used, as they are local to the function where they are declared. If parameters are declared, they have the following constraints: The value of argc is non-negative. 
+                    argv[argc] is a null pointer. If the value of argc is greater than zero, the array members argv[0] through argv[argc-1] will contain pointers to strings. These are given impleementation defined values by the host system prior
+                    program startup from elsehwere in the hosted environment. If the host environment is not capable of supplying strings with letters in both uppercase and lowercase, the implementation shall ensure the strings are received in lowercase. </span></p>
+
+            <p><span> If the value of argc is greater than zero, the string pointed to by argv[0] represents the program name; argv[0][0] will be a null character if the program name is not available from the host environment. If the value of argc is greater than one,
+                the strings pointed to by argv[1] through argv[argc-1] represent the program parameters. The parameters argc and argv and the string pointed to by the argv array shall be modfieid by the program, and retain their last-stored values between program startup and program termination.
+            </span></p>
+
         </div>
 </div>
