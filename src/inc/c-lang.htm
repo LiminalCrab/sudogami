@@ -11,6 +11,7 @@
             <section class="recent-entries">
                 <h1> Recent </h1>
                 <ul>
+                    <li><a href="cataclysmic-converter.html"> Cataclysmic Converter [2021/06/02]</a></li>
                     <li><a href="mobile-and-accessibility.html">Mobile & A11Y</a> [2021/05/19]</a></li>
                     <li><a href="c-lang.html">C [2021/05/19]</a></li>
                     <li><a href="starlamp.html">Starlamp [2021/05/19]</a></li>
@@ -72,6 +73,30 @@
 
             <p><span> If the value of argc is greater than zero, the string pointed to by argv[0] represents the program name; argv[0][0] will be a null character if the program name is not available from the host environment. If the value of argc is greater than one,
                 the strings pointed to by argv[1] through argv[argc-1] represent the program parameters. The parameters argc and argv and the string pointed to by the argv array shall be modfieid by the program, and retain their last-stored values between program startup and program termination.
+            </span></p>
+
+            <h3> CONTINUE resources [2021/06/02 1234]</h3>
+            <p><span> So far I've been peering at an abundance of resources from the internet, a few that piqued my interest were the following:
+                <ul>
+                    <li><a href="http://users.cs.cf.ac.uk/Dave.Marshall/C/">Programming in C: UNIX System Calls and Subroutines using C</a></li>
+                    <li><a href="http://www.catb.org/~esr/writings/taoup/html/">The Art of Unix Programming</a></li>
+                    <li><a href="http://beej.us/guide/bgnet/html/">Beej's Guide to Network Programming</a></li>
+                </ul>
+
+                But in all honesty, what helped me the most were from members of my own community, the linux man pages, and the #C community on Libera IRC.
+                <ul>
+                    <li><a href="https://ftrv.se/3">Sigrid on C</a></li>
+                    <li><a href="https://wiki.xxiivv.com/site/ansi_c.html"> Devine's C notes.</a></li>
+                    <li><a href="https://www.kernel.org/doc/man-pages/"> Linux Man pages </a></li>
+                </ul>
+
+                I also wrote a small program, that's suppose to corrupt all the files in a given directory with the phrase "I don't have that much money.", but instead
+                it only really works on files without extensions because I didn't feel like implementing the rest of them. The program was more of a joke to get me into C syntax and pointers, and overstayed its welcome in my IDE. 
+                It's called the <a href="https://github.com/LiminalCrab/cataclysmic-converter">Cataclysmic Converter</a>, and it's definitely $800. So far, messing around with pointers was originally a bit confusing, but once I got going
+                things became clear. I have a lot of work to do up this ancient path but I think C is really the way to go. I've spent the last few months in frameworks like Vue, messing around with Python for Auger, but I never felt like I was 
+                learning something significant, I was just kind of coloring in the books of a framework, but with C I feel like I'm unlocking almost complete control over my environment. I'm glad I worked up the courage to get to this point.
+
+                
             </span></p>
 
         </div>
