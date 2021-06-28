@@ -65,7 +65,7 @@
          where Synapsys will be your standard server CLI. It will require a Leader/Follower layout, where we have a leader metronome which will likely be tied to the individual with the lowest latencey
         and the Followers starting from the second lowest latency down. My reason for this is due to how the artists will have to hear one another. Speaking of hearing each other,
     for audio I/O I'll be using OpenAL. So, in general this project will be a combination of network programming, UI programming, and audio programming. All written in C. How exciting.</span></p> 
-        <h2> CONTINUE apsis [2021/06/27 2050]</h2>
+        <h3> CONTINUE apsis [2021/06/27 2050]</h3>
         <span><p> In order to keep the init function running, I've switched it to a boolean value, inside is a boolean value called is_running, and it's set to true upon initalization. The window
             will be established, pWindow (parent window), will be defined at a width of 640, and a height of 480 at a undefined position on the screen. (Will make this adjustable in the future, but for prototyping
             this will have to work for now). When experimenting with SDL, I used SDL_GetTicks to keep a window running momentarily, about five seconds just to get a glimpse of it, but this isn't sufficient for long term
@@ -79,7 +79,7 @@
             start adding keywords as bookmarks for control-f through the browser.</p></span>
             
         <span><p> Reminder to build a wiki page for SDL. Useful snippets will need to be a section for API categories. Funny how SDL's documentation is so bare, I mean I get it. I just find it hilarious how certain pages are just blank with no explanation. You'd expect a beast like this to be filled with information. I respect that at the same time. Another interesting thing about SDL, is that nearly every single tutorial on the web assumes that you're using C++, even the ones on the website, despite SDL being built in C. I get that for gamedev that's cool most people will use it for that, but in general as someone new to the language I'm finding that doing research is hindering me a bit -- that being said, I can infer what I have to do from C++ code, it won't be perfect but I'll get where I'm going eventually. </p></span>
-        <h2>CONTINUE apsis | ui [2021/06/28/ 0010]</h2>
+        <h3>CONTINUE apsis | ui [2021/06/28/ 0010]</h3>
 
         <span><p> So I was originally going to use a switch statement to help exit the program safely in the main file by passing an argument, but the thing about this is that command line arguments are set in stone once the program runs. So this switch statement is practiclaly useless for anything other than initalizing the program. I could make my own signal handler to kill the program, but SDL has its down built for this specifcally. Might as well take advantage of the SDL libraries event handlers over the linux standard library. Just a heads up: You still do SDL_DestroyWindow, SDL_DestroyRenderer, SDL_Quit even after SDL_Quit breaks out of the event loop. Also I should be using valgrind more often to catch memory leaks before the program gets too big because once that happens, plugging them will become much more difficult.</p></span>
 
@@ -92,5 +92,5 @@
     </div>
 
 
-</main><footer><hr /><span style='float:right'>Edited on Mon Jun 28 03:50:55 2021
+</main><footer><hr /><span style='float:right'>Edited on Mon Jun 28 03:53:09 2021
  <a href='https://github.com/hundredrabbits/100r.co/edit/master/src/inc/apsis.htm'>[edit]</a><br/></span><b>SUDOGAMI</b> © 2021 — Powered by <a href='https://github.com/hundredrabbits/100r.co'>100r</a> | LICENSE:  <a href='https://github.com/hundredrabbits/100r.co/blob/master/LICENSE.by-nc-sa-4.0.md' target='_blank'>BY-NC-SA 4.0</a></footer></body></html>
