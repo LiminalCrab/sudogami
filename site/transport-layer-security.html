@@ -1,0 +1,92 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><meta name='description' content='TODO'/><meta name='thumbnail' content='https://sudogami.com/media/services/thumbnail.jpg' /><meta name='viewport' content='width=device-width,initial-scale=1'><link rel='alternate' type='application/rss+xml' title='RSS Feed' href='../links/rss.xml' /><link rel='stylesheet' type='text/css' href='../links/main.css'><link rel='shortcut icon' type='image/png' href='../media/favico.png'><title>SUDOGAMI &mdash; transport-layer-security</title></head><body><header><a href='home.html'><img src='../media/favico.svg' class='centered' alt='SUDOGAMI' height='120'></a></header><nav><div class="side-nav-menu">
+<details open>
+    <summary>Menu</summary>
+    <section class="site-nav">
+            <section id="directory" class="global-nav">
+                <h1>Directory</h1>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="journal.html">Journal</a></li>
+                        <li><a href="wiki.html">Wiki</a></li>
+                        <li><a href="travel.html">Travel</a></li>
+                        <li><a href="index.html">Meta</a></li>
+                    </ul>
+                </section>
+                <section id="projects" class="global-nav">
+                <h1>Projects</h1>
+                    <ul>
+                        <li><a href="https://auger.sudogami.com/page/0.html">Auger</a> [<a href="https://github.com/LiminalCrab/auger">github</a>]</li>
+                        <li>Sidg64 [<a href="https://github.com/LiminalCrab/sidg64">github</a>]</li>
+                        <li>Apsis [<a href="https://github.com/LiminalCrab/Apsis">github</a>]</li>
+                    </ul>
+                </section>
+                <section id="communities" class="global-nav">
+                <h1>Communities</h1>
+                    <ul>
+                        <li><a href="https://merveilles.town/">Merveilles</a></li>
+                        <li><a href="http://infoforcefeed.org/">Infoforcefeed</a></li>
+                        <li><a href="http://www.rooksandkings.com/">Rooks and Kings</a></li>
+                    </ul>
+                </section>
+                <section id="webring" class="global-nav">
+                <h1>Webring</h1>
+                <ul>
+                    <li><a href="https://webring.xxiivv.com/">Webring</a></li>
+                </ul>
+                </section>
+                <section id="friends" class="global-nav">
+                <h1>Friends</h1>
+                <ul>
+                    <li><a href="https://www.0edit.com/">Ed Harrison</a></li>
+                    <li><a href="https://www.pushbak.org/">pushBAK</a></li>
+                    <li><a href="https://100r.co/site/home.html">Hundred Rabbits</a></li>
+                    <li><a href="https://eswat.ca/">ESWAT</a></li>
+                </ul>
+        </section>
+        <section>
+            <h2><a id='meta'>Meta</a></h2>
+            <ul class='nobull capital'>
+                <li><a href='index.html' class='local'>index</a></li>
+            </ul>
+        </section>
+    </section>
+</details>
+</div></nav><!-- Generated file, do not edit -->
+
+<h1>transport-layer-security</h1><main>
+    <div class="wiki-content">
+
+        <h2>Transport Layer Security</h2>
+        <b>Defined in RFC5246<br></b> 
+        <span><i>The primary goal of the TLS protocol is to provide privacy and data
+            integrity between two communicating applications.</i></span>
+
+        <span><p>
+            Transport Layer Security is a cryptographic protocol designed to provide communications security over a computer network. There are several
+            versions of the protocol, and it finds widespread use in applications such as browsing, email, instant messaging, and VoIP. Websites can use tables
+            to secure all communications between their servers and web browsers. 
+
+            <b>Note:</b> SSL is deprecated for TLS -- but, for the most put, TLS is just the new name of SSL -- It get's called by either name but officially it's TLS now.
+        </p></span>
+        <span><p>
+            TLS uses "Certificate Authorities" (CA files) that check and sign for authenticity of a public key certificate from a server. A client connecting to the server via TLS 
+            may verify it's certificate authenticity by relying on the digital signature of the CA. 
+        </p></span>
+
+        <span><p>
+            Default mecanisms for loading a default CA certificates include OpenSSL, GnuTLS, Network Security Services, mbedTLS, and LibreSSL. The majority of these mechanisms provide
+            API functions that load certificates from a hardcoded directory or file. Some, such as Network Security Services load the certficiates from a dynamically configured list of PKCS #11 modules,
+            managed with a dedicated API, and configuration can be stored in any directory pointed to by a user.
+        </p></span>
+
+        <span><p> Elliptic Curves are a newer encrpytion algorithm and are becoming increasingly adopted for modern systems. A 256-bit elliptic curve key is expected to provide sufficient security through the year 2030.
+            where an older RSA cryptosystem has higher compatibility, (especially with clients that do not support recent versions of TLS ) but relies on factorization, which is an area of cryptograhpy that's becomign weaker
+            due to the development of faster factorization algorithms. A 2048-bit RSA private key is expected to provide security through most of the 2020s. A 4096 bit RSA private key is expected to provide security for a bit longer (barring major advancements in factorization),
+            but has a very large performance impact.
+        </p></span>
+        
+    </div>
+</div>
+
+</main><footer><hr /><span style='float:right'>Edited on Sun Jun 27 21:15:36 2021
+ <a href='https://github.com/hundredrabbits/100r.co/edit/master/src/inc/transport-layer-security.htm'>[edit]</a><br/></span><b>SUDOGAMI</b> © 2021 — Powered by <a href='https://github.com/hundredrabbits/100r.co'>100r</a> | LICENSE:  <a href='https://github.com/hundredrabbits/100r.co/blob/master/LICENSE.by-nc-sa-4.0.md' target='_blank'>BY-NC-SA 4.0</a></footer></body></html>

@@ -1,0 +1,34 @@
+<main>
+    <div class="wiki-content">
+
+        <h2>Transport Layer Security</h2>
+        <b>Defined in RFC5246<br></b> 
+        <span><i>The primary goal of the TLS protocol is to provide privacy and data
+            integrity between two communicating applications.</i></span>
+
+        <span><p>
+            Transport Layer Security is a cryptographic protocol designed to provide communications security over a computer network. There are several
+            versions of the protocol, and it finds widespread use in applications such as browsing, email, instant messaging, and VoIP. Websites can use tables
+            to secure all communications between their servers and web browsers. 
+
+            <b>Note:</b> SSL is deprecated for TLS -- but, for the most put, TLS is just the new name of SSL -- It get's called by either name but officially it's TLS now.
+        </p></span>
+        <span><p>
+            TLS uses "Certificate Authorities" (CA files) that check and sign for authenticity of a public key certificate from a server. A client connecting to the server via TLS 
+            may verify it's certificate authenticity by relying on the digital signature of the CA. 
+        </p></span>
+
+        <span><p>
+            Default mecanisms for loading a default CA certificates include OpenSSL, GnuTLS, Network Security Services, mbedTLS, and LibreSSL. The majority of these mechanisms provide
+            API functions that load certificates from a hardcoded directory or file. Some, such as Network Security Services load the certficiates from a dynamically configured list of PKCS #11 modules,
+            managed with a dedicated API, and configuration can be stored in any directory pointed to by a user.
+        </p></span>
+
+        <span><p> Elliptic Curves are a newer encrpytion algorithm and are becoming increasingly adopted for modern systems. A 256-bit elliptic curve key is expected to provide sufficient security through the year 2030.
+            where an older RSA cryptosystem has higher compatibility, (especially with clients that do not support recent versions of TLS ) but relies on factorization, which is an area of cryptograhpy that's becomign weaker
+            due to the development of faster factorization algorithms. A 2048-bit RSA private key is expected to provide security through most of the 2020s. A 4096 bit RSA private key is expected to provide security for a bit longer (barring major advancements in factorization),
+            but has a very large performance impact.
+        </p></span>
+        
+    </div>
+</div>
