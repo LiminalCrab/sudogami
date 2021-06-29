@@ -82,7 +82,7 @@
         <h3>CONTINUE apsis | ui [2021/06/28/ 0010]</h3>
 
         <span><p> So I was originally going to use a switch statement to help exit the program safely in the main file by passing an argument, but the thing about this is that command line arguments are set in stone once the program runs. So this switch statement is practiclaly useless for anything other than initalizing the program. I could make my own signal handler to kill the program, but SDL has its down built for this specifcally. Might as well take advantage of the SDL libraries event handlers over the linux standard library. Just a heads up: You still do SDL_DestroyWindow, SDL_DestroyRenderer, SDL_Quit even after SDL_Quit breaks out of the event loop. Also I should be using valgrind more often to catch memory leaks before the program gets too big because once that happens, plugging them will become much more difficult.</p></span>
-
+        
         <span><p> [1226] re: bare documentation... so the SDL github actually contains way more information in the header files that go over things much more in depth.</p></span>
         <span><p> [0139] Things are taking shape now and making much more sense, created a drawing routine for a circle, and set a renderer to render a texture that the circle will be drawn on. I see what Devine
                 meant when he said that it was a lot like using an HTML Canvas, but faster.</p></span>
@@ -90,7 +90,8 @@
         
         <h3>CONTINUE apsis | ui [2021/06/28 1121] </h3>
         <span><p> I had recently told a story about the time I attempted to use Vulkan over Unity and completely understimated what it would take to create a game engine with low level code. 1200 lines of code to draw a triangle was pretty mind blowing and it made me decide to switch us back to Unity where I could hammer out C# and not have to worry about things that were way over my head at the time. Hilariously, I find myself in a situation where I'm going to be doing just that, at a point my life where I'm much more comfortible with the idea of having to draw things pixel by pixel. Drawing circles is another beast in code, I've seen several complex exampes on how people go about doing this, a very good example, and one that I had chosen to use is the <a href="">Bresenham algorithm</a>, a mid-point circle drawing algorithm that determines the points needed for rasterizing a circle by assigning the first octant at the mid point at 45 degrees, and for every pixel on x and y center, it calculates pixel by pixel each octant up to 8 total octants for a whole 360 degrees. </p></span>
-
+        
+        <h3> CONTINUE apsis | ui [2021/06/29 1252</h3>
         <span><p> [1252] Reorganizing the code. Gonna make this more readable. I'll also be working on the <a href="simple-direct-media-layer.html">SDL wiki entry</a>.</p></span>
         <span><p> [0145] Next we'll need a line / arrow, this will be a rotating phasor. The metronome ticking at f beats per minute, the phasor will rotate 2π radians once every 60/f seconds. So pretty much for a given tempo in beats per minute, the phasor will make x rotations. </p></span>
         <span><p> [0224] Surface is completely unncessary now, it's an abstraction left over from SDL1.2 so I've removed it from my code in favor of SDL_Texture which is the new way to buffer pixels directly into vram. </p></span>
@@ -101,5 +102,5 @@
     </div>
 
 
-</main><footer><hr /><span style='float:right'>Edited on Tue Jun 29 10:08:26 2021
+</main><footer><hr /><span style='float:right'>Edited on Tue Jun 29 10:12:30 2021
  <a href='https://github.com/hundredrabbits/100r.co/edit/master/src/inc/apsis.htm'>[edit]</a><br/></span><b>SUDOGAMI</b> © 2021 — Powered by <a href='https://github.com/hundredrabbits/100r.co'>100r</a> | LICENSE:  <a href='https://github.com/hundredrabbits/100r.co/blob/master/LICENSE.by-nc-sa-4.0.md' target='_blank'>BY-NC-SA 4.0</a></footer></body></html>
