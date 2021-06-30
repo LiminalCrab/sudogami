@@ -21,6 +21,12 @@
 
 }
 
+img.animated-gif
+{
+  width: 820px;
+  height: 520px;
+}
+
 .main-content > span{
     font-size: 14px;
 }
