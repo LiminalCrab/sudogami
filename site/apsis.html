@@ -65,7 +65,9 @@
          where Synapsys will be your standard server CLI. It will require a Leader/Follower layout, where we have a leader metronome which will likely be tied to the individual with the lowest latencey
         and the Followers starting from the second lowest latency down. My reason for this is due to how the artists will have to hear one another. Speaking of hearing each other,
     for audio I/O I'll be using OpenAL. So, in general this project will be a combination of network programming, UI programming, and audio programming. All written in C. How exciting.</span></p> 
+        
         <h3> CONTINUE apsis [2021/06/27 2050]</h3>
+
         <span><p> In order to keep the init function running, I've switched it to a boolean value, inside is a boolean value called is_running, and it's set to true upon initalization. The window
             will be established, pWindow (parent window), will be defined at a width of 640, and a height of 480 at a undefined position on the screen. (Will make this adjustable in the future, but for prototyping
             this will have to work for now). When experimenting with SDL, I used SDL_GetTicks to keep a window running momentarily, about five seconds just to get a glimpse of it, but this isn't sufficient for long term
@@ -95,7 +97,7 @@
         <span><p> [1252] Reorganizing the code. Gonna make this more readable. I'll also be working on the <a href="simple-direct-media-layer.html">SDL wiki entry</a>.</p></span>
         <span><p> [0145] Next we'll need a line / arrow, this will be a rotating phasor. The metronome ticking at f beats per minute, the phasor will rotate 2π radians once every 60/f seconds. So pretty much for a given tempo in beats per minute, the phasor will make x rotations. </p></span>
         <span><p> [0224] Surface is completely unncessary now, it's an abstraction left over from SDL1.2 so I've removed it from my code in favor of SDL_Texture which is the new way to buffer pixels directly into vram. </p></span>
-        <span><p> [0934] The phasor now gets the origin x, origin y, point x, point y arguments. We set double for radians, get the degree by multiplying the radians by pi / 180. Then we get two delta, delta x, delta y. <i>Delta x is the result of cos(angle) * (pX - oX) - (sin(angle) * (pY - oY) + oX;</i> and <i>delta Y is the result of (sin(angle) * (pX - oX) + (cos(angle) * (pY - oY) + oY, </i> afterwards we translate it back: pX += dX and pY += dY. The arguments are then filled by a while loop in the test render that increments the pX and pY values. Which so far so good. 
+        <span><p> [0934] The phasor now gets the origin x, origin y, point x, point y arguments. We set double for radians, get the degree by multiplying the radians by pi / 180. Then we get two delta, delta x, delta y. <i>Delta x is the result of originX + cos(angle)*radius</i> and <i>delta Y is the result of originY + sin(angle)*radius</i>. 
             <center><img height="500px" src="../gallery/1_apsis_lines.png" alt="An image of a circle with various lines rotating around it's center origin."></center>
     <span><p> That being said, the lines don't clean up, so that's why it looks some weird raytracing technique. I'll have to work that into the while loop. I'll probably be implementing SDL_GetTicks for updating the screen to show it kind of moving in a deltaTime esq manner. Or maybe Devine has a better idea at how that might work. Either way, small steps = accomplishments.
         This code will have to be entirely rewritten once this prototype is done. </p></span>
@@ -112,5 +114,5 @@
 </div>
 
 
-</main><footer><hr /><span style='float:right'>Edited on Wed Jun 30 05:53:32 2021
+</main><footer><hr /><span style='float:right'>Edited on Thu Jul  1 08:05:10 2021
  <a href='https://github.com/hundredrabbits/100r.co/edit/master/src/inc/apsis.htm'>[edit]</a><br/></span><b>SUDOGAMI</b> © 2021 — Powered by <a href='https://github.com/hundredrabbits/100r.co'>100r</a> | LICENSE:  <a href='https://github.com/hundredrabbits/100r.co/blob/master/LICENSE.by-nc-sa-4.0.md' target='_blank'>BY-NC-SA 4.0</a></footer></body></html>
