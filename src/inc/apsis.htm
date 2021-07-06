@@ -53,22 +53,48 @@
    <center><img class="animated-gif" src="../gallery/2_apsis_spin.mp4.gif" alt="An image of a circle with various lines rotating around it's center origin."></center>
    <span><p>I'll upload a higher res one someday, maybe. Probably not ANYWHO.</p></span>
    <h3>CONTINUE apsis | new branch | ui-proto-abst [2021/06/05 1233]</h3>
-   <span><p> Created a new branch to test out some stuff that I've since reverted as SDL handles everything I was going to do already, much faster too. I'm going to implement SDL's font library and get that working. I don't have any particular reason to buffer pixels myself and make a bitmap for pixel values, SDL does that for me. Though some day I'll want to end up doing this myself, just to learn more about it and see what I can get out of it. My main goal is to just finish this UI prototype right now and get things on track. </p></span>
-    <ol>
+   <span><p> Experimented with the pixel buffer and offset throughout the night and decided that before I should learn more about SDL before I start replacing it's abstractions with my own</p></span> 
+   <ol>
         <li> Rewrote code for clarity. </li>
         <li> Implemented SDL TTL fonts. (this oddly took some time?) </li>
         <li> Removed font bitmaps and custom pixel buffer implementation.</li>
+        <li> Added performance limiter to save resources, decreased CPU usage 11% to 0% </li>
+        <li> clamped performance count with SDL_Delay()<li>
+        <li> Removed texture creation from draw_txt function call and freed memory.</li>
     </ol>
 
     <span><p> Annnd todo. </p></span>
     
-    <ol>
-        <li> Get working directory function, concatinate it with a specified file
-        <li> add texture and text for non-static beats per minute number.
-        <li> Add calculations for BPM
-        <li> Tie BPM to phasor rotation speed.
-        <li> Status bar that displays phase, network related code. (latency)</li>
+    <ol><li> Pixel buffer for text
+        <li> Draw symbol functions
+        <li> BPM smybol </li>
+        <li> Latency symbol </li>
+        <li> BPM control symbols <li>
+        <li> User input for BPM controls </li>
+        <li> Calculate BPM based off phasor rotation speed.
         <li> Pulse signal implementation </li>
     <ol>
 
+    <h3> CONTINUE apsis | ui_proto_abst [2021/06/05 1121] </h3>
+    <span><p> I had some time to mess around with the SDL_TTF library and I have to admit, I absolutely hate it. Even for C it's rather heavy, I can do better than that so I'm going to.
+        I wrote about how I removed the pixel buffers from earlier and how I needed to learn more about SDL, well after wressling down memory leaks and still having my memory match half that of Spotify's
+        I decided to go back to pixel buffer one more time. That is what I will spend my evening doing.</p></span>
+        
+        DONE
+        <ol>
+            <li> Pixel buffer for text
+            <li> Draw symbol functions
+            <li> BPM smybol </li>
+            <li> Latency symbol </li>
+            <li> BPM control symbols <li>
+        </ol>
+
+        <span><p>TO DO</span></p>
+        <ol>
+            <li> User input for BPM controls </li>
+            <li> Calculate BPM based off phasor rotation speed.
+            <li> Pulse signal implementation </li>
+        <ol>
+ 
+    <span></p> Also don't forget to you know, replace some of the hardcoded position integers for draw_symbol in render with variables that calculate that position.</p><span>
 </div>
