@@ -1,0 +1,21 @@
+<main>
+        <div class="wiki-content">
+            <span><p> Integer Constants are of four different bases: <span></p>
+                <ol>
+                    <li> A number starting with a digit from 1 to 9 followed by a digit from 0 to 9 is a decimal base 10 constant.</li>
+                    <li> If a number begins with '0x' or '0X' and is followeed by digits from 0 to 9 and letters from a to f, or A to F, it is interpreted as a hexadecimal base 16 constant, like 0xbeef to 0XDEAD.</li>
+                    <li> If a number begins with 0 and is followed by digits from 0 to 7, it is interpeted as an octal base 8 constant, like 17l or 0xFfL.</li>
+                </ol>
+
+                <span></p> In ANSI C, an integer constant may be followed by: </p></span>
+                <ol>
+                    <li>a 'u' or 'U to indicate an unsighed constant, like 33u</li>
+                    <li>a 'ul' or 'UL' to indicate an unsigned long constant like 32767 </li>
+                </ol>
+                <span><p> an integer constant takes on the minimum type necessary to be accurately represented, (possibly) starting as int and increasing from long to unsigned long</p></span>
+                <ol>
+                    <li>octal and hexadecimal constants, and (in ANSI C) constants ending with a 'u' or 'U' may also be unsigned (which can hold larger values than int but may have fewer bytes than long)</li>
+                </ol>
+                <span><p> in ANSI C, 0 is always unsigned (perhaps to reduce ambiguity on machines with one's complement arithmetic) </p></span>
+    		</div>
+</div>
