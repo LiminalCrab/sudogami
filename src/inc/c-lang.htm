@@ -2,78 +2,19 @@
         <div class="wiki-content">
 
              <h3>START c language [2021/05/23 0055]</h3>
-             <p><span> So it's time to get started understanding this beast. I spoke to Cancel on Merveilles and he was kind enough to provide me a resource to focus on.
-                 Just the [<a href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf">C specifications</a>], I asked about using Stackoverflow and just the documentation to which he had informed me that Stackoverflow as a resource for C 
-                 is like playing a game of telephone. I think that's true for most languages, and I'd honestly prefer learn from the source and make my own interpretations and seek help regarding them. Looking into it this document actually references another
-                 document called The C Reference written by Dennis Ritchie, so I'll be using that as well. Both of these together should be good enough for basic syntax. I have a book called "The Elements of Computing Systems" that should do a good job at introducing low-level concepts to me.
 
-                 If I feel truly lost, I'll go back to watching Harvard's CompSci 101 course. But for now, I'll take a crack at it the good old fashion way.
-
-                 <h3>CONTINUE pointers [2021/05/24 1421]</h3>
-                 <p><span>I should've gone to bed hours go but instead I've spent much of my day dissecting the 100r wiki engine and reading the C specifications against syntax I didn't understand.
-                    Pointers have always deterred me from C, when I was younger I'd asked about them and the answer I've always received was "it points to an object in memory", which yeah that's correct
-                    but a better way to put it for a 16 year old would've been: It access the value of a separate piece of data. Or at least, for a noob, "it copies the value of another variable" would have 
-                    at least pointed me in the right direction. I think in that time it lead me to learning about the stack and the heap, which is good knowledge, and you definitely should know it, but not necessarily
-                    something a beginner really has to know at the time. It didn't get me anywhere. Anyway, pointers are no longer this terrifying behemoth of manual memory management. In fact, they're very interesting.
-                 </span></p>
-
-                 <p><span>I'll need to practice with them more, but the very simple gist is, you define one variable int [x = 1;], define another variable, call it [int *x_point;], and setup an indirect reference between x_point and x with an address operator. Like this.
-                     [x_point = &x;] and now you've assigned a pointer to variable x, and whatever value is indirectly assigned to x_link is now assigned to x.
-                     [y = *link_x;]. Output: y = 1;. I'm actually very eager to work with structs and linked lists, they seem to be a fun deviation from standard arrays, and setting them up is intriguing. Probably the most interesting thing I've learned of linked lists is that 
-                     members of a list don't have to be stored sequentially in memory, so you can access them from anywhere, they don't have to physically occur in any specific order. Definitely riding this pointer train now, wish I had put in more effort into learning C when I was younger.
-                     Another fascinating thing regarding linked lists is how you set them up for sequencing, it's so manual? I guess that word works. You have to assign a pointer to where the start of the list is kept, and for every structure afterwars you simply point to the next, and the next, and finally
-                     you terminate it with a null pointer. I love this concept, it feels like there's so much more to work with.
-                 </span></p>
-
-                 <p><span>Also a fun little note on function arguments using pointers: If a pointer is sent to the function as an argument, the value of the pointer is copied to the parameter. 
-                     but the function does not affect the pointer that was passed down into it. The catch is, the pointer cannot be changed by the function, but the elements that the pointer references
-                     can be. Neat little tid bit. I'm looking forward to diving into Dynamic Memory Allocation a bit later. Also learned a cool thing about compilers which explained the output of all the final executable object file. It's all pretty much just how the compiler parses machine code, these files are the byproduct of the assembler. After the compiler translates the program into object code,
-                     it searches for all the programs that are used in the source file and links them together. The final file is an executable .o file, (on windows it's a .exe). Good stuff. Anyway I'm spending the rest of tomorrow appending the 100r wiki engine to be a bit more verbose with directories. Or at least I'm going to try to. If I suck too much at this it might be better
-                     for me to rewrite it from scratch using 100r as reference. I'll probably learn a lot more that way.
-                 </span></p>
-
-                 <h3>CONTINUE dynamic memory allocation [2021/05/24 0316] </h3>
-                 <p><span> This was another thing that scared me about C growing up, the idea of having to keep track of your memory. How was somebody suppose to do that?
-                     I kind of imagined it like opening a hex editor and changing bits around, similar to how Assembly looks. It was an overwhelming idea so I just stuck with C#.
-                     Adventuring back to it, it's not so bad, the sizeof operator will help me in my journey, along with a lot of practice with calloc and malloc. I just need to keep in mind this important
-                     piece of information: <b>[1]</b> Malloc and Calloc are defined to return a pointer to void, and this pointer should be type cast to the appropriate pointer type.
-                 </span></p>
-            <p><span> <b>[1]</b> [ pnt = (int * ) malloc (50 * sizeof (int))] </span></p>
-            <p><span>In that example, the pointer type is type cast to an integer pointer and then assigned to the pnt variable. And now for something totally different.</span></p>
-
-            <h3> [0441] Main Function 24 </h3>            
-            <p><span> Main is the function called at program startup. It's implementation requires no parameters (prototypes), and it returns a data type of int. When parameters are used for the main function,
-                    they are often referred to as argc and argv, but any name may be used, as they are local to the function where they are declared. If parameters are declared, they have the following constraints: The value of argc is non-negative. 
-                    argv[argc] is a null pointer. If the value of argc is greater than zero, the array members argv[0] through argv[argc-1] will contain pointers to strings. These are given impleementation defined values by the host system prior
-                    program startup from elsehwere in the hosted environment. If the host environment is not capable of supplying strings with letters in both uppercase and lowercase, the implementation shall ensure the strings are received in lowercase. </span></p>
-
-            <p><span> If the value of argc is greater than zero, the string pointed to by argv[0] represents the program name; argv[0][0] will be a null character if the program name is not available from the host environment. If the value of argc is greater than one,
-                the strings pointed to by argv[1] through argv[argc-1] represent the program parameters. The parameters argc and argv and the string pointed to by the argv array shall be modfieid by the program, and retain their last-stored values between program startup and program termination.
-            </span></p>
-
-            <h3> CONTINUE resources [2021/06/02 1234]</h3>
-            <p><span> So far I've been peering at an abundance of resources from the internet, a few that piqued my interest were the following:
+            <p><span> Resources
                 <ul>
+                    <li><a href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf">C specifications</a></li>
                     <li><a href="http://users.cs.cf.ac.uk/Dave.Marshall/C/">Programming in C: UNIX System Calls and Subroutines using C</a></li>
                     <li><a href="http://www.catb.org/~esr/writings/taoup/html/">The Art of Unix Programming</a></li>
                     <li><a href="http://beej.us/guide/bgnet/html/">Beej's Guide to Network Programming</a></li>
                 </ul>
-
-                But in all honesty, what helped me the most were from members of my own community, the linux man pages, and the #C community on Libera IRC.
                 <ul>
                     <li><a href="https://ftrv.se/3">Sigrid on C</a></li>
                     <li><a href="https://wiki.xxiivv.com/site/ansi_c.html"> Devine's C notes.</a></li>
                     <li><a href="https://www.kernel.org/doc/man-pages/"> Linux Man pages </a></li>
                 </ul>
-
-                I also wrote a small program, that's suppose to corrupt all the files in a given directory with the phrase "I don't have that much money.", but instead
-                it only really works on files without extensions because I didn't feel like implementing the rest of them. The program was more of a joke to get me into C syntax and pointers, and overstayed its welcome in my IDE. 
-                It's called the <a href="https://github.com/LiminalCrab/cataclysmic-converter">Cataclysmic Converter</a>, and it's definitely $800. So far, messing around with pointers was originally a bit confusing, but once I got going
-                things became clear. I have a lot of work to do up this ancient path but I think C is really the way to go. I've spent the last few months in frameworks like Vue, messing around with Python for Auger, but I never felt like I was 
-                learning something significant, I was just kind of coloring in the books of a framework, but with C I feel like I'm unlocking almost complete control over my environment. I'm glad I worked up the courage to get to this point.
-
-                
             </span></p>
-
         </div>
 </div>
