@@ -15,6 +15,10 @@ module.exports = function (eleventyConfig) {
         return DateTime.fromJSDate(dateObj).toFormat('yyyy/MM/dd TT');
     });
 
+    eleventyConfig.addFilter('journalDateString', dateObj => {
+        return DateTime.fromJSDate(dateObj).toFormat('yyyy/MM/dd');
+    });
+
     return {
         dir: {
             input: "src",

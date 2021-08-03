@@ -9,5 +9,5 @@ title: meta
 {%- endfor %}
 
 {% for page in collections.wiki %}
-  [{{ page.data.title }}]({{ page.url }})
+- [{{ page.data.title }}]({{ page.url }})
 {%- endfor %}

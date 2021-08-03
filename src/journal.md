@@ -5,5 +5,5 @@ title: journal
 
 ## {{ title }}
 {% for page in collections.journal %}
-- [{{ page.data.title }}]({{ page.url }})
+- [{{ page.data.title }}]({{ page.url }}) // {{page.date | journalDateString}}
 {%- endfor %}

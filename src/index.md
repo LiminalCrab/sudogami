@@ -16,6 +16,3 @@ This website is not a reflection of  my abilities to use front-end frameworks. I
 
 Email: preston@sudogami.com
 
-Git: https://github.com/LiminalCrab
-
-
