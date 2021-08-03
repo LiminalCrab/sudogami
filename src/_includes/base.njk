@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name='thumbnail' content='https://sudogami.com/media/services/thumbnail.jpg'/>
+        <meta name='thumbnail' content='https://sudogami.com/media/favicon.svg'/>
         <meta name="description" content="Sudogami">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <img src='../media/favico.png' class='centered' alt='SUDOGAMI' height='120'>
@@ -11,7 +11,47 @@
     </head>
     <body>
         <header>
-            {% include 'navigation.html' %}
+            <div class="side-nav-menu">
+            <section class="site-nav">
+                <section id="directory" class="global-nav">
+                    <h1>Directory</h1>
+                        <ul>
+                            <li><a href="/index.html">Home</a></li>
+                            <li><a href="/journal/index.html">Journal</a></li>
+                            <li><a href="/travel/index.html">Travel</a></li>
+                            <li><a href="/meta/index.html">Meta</a></li>
+                        </ul>
+                    </section>
+                    <section id="projects" class="global-nav">
+                    <h1>Projects</h1>
+                        <ul>
+                            <li><a href="https://auger.sudogami.com/page/0.html">Auger</a> [<a href="https://github.com/LiminalCrab/auger">github</a>]</li>
+                            <li>Sidg64 [<a href="https://github.com/LiminalCrab/sidg64">github</a>]</li>
+                            <li>Apsis [<a href="https://github.com/LiminalCrab/Apsis">github</a>]</li>
+                        </ul>
+                    </section>
+                    <section id="communities" class="global-nav">
+                    <h1>Communities</h1>
+                        <ul>
+                            <li><a href="https://merveilles.town/">Merveilles</a></li>
+                            <li><a href="http://infoforcefeed.org/">Infoforcefeed</a></li>
+                            <li><a href="http://www.rooksandkings.com/">Rooks and Kings</a></li>
+                        </ul>
+                    </section>
+                    <section id="friends" class="global-nav">
+                    <h1>Friends</h1>
+                    <ul>
+                        <li><a href="https://www.0edit.com/">Ed Harrison</a></li>
+                        <li><a href="https://www.pushbak.org/">pushBAK</a></li>
+                        <li><a href="https://ftrv.se/">Sigrid</a></li>
+                        <li><a href="https://100r.co/site/home.html">Hundred Rabbits</a></li>
+                        <li><a href="https://sunzenshen.github.io/">Sunzenshen</a></li>
+                        <li><a href="https://eswat.ca/">ESWAT</a></li>
+                    </ul>
+            </section>
+        </section>
+    </div>
         </header>
+        {{ content | safe }}
     </body>
 </html>
