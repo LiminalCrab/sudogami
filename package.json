@@ -1,0 +1,23 @@
+{
+  "name": "sudogami",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LiminalCrab/sudogami.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LiminalCrab/sudogami/issues"
+  },
+  "homepage": "https://github.com/LiminalCrab/sudogami#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}
