@@ -1,8 +1,9 @@
 ---
 layout: base.njk
+title: journal
 ---
 
-## Journal
+## {{ title }}
 {% for page in collections.journal %}
 - [{{ page.data.title }}]({{ page.url }})
 {%- endfor %}
