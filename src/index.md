@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: index.njk
 title: home
 ---
 
@@ -14,4 +14,8 @@ This website is not a reflection of  my abilities to use front-end frameworks. I
 
 ## Contact
 
-My stuff
+Email: preston@sudogami.com
+
+Git: https://github.com/LiminalCrab
+
+
