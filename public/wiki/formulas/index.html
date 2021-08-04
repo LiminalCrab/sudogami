@@ -61,8 +61,52 @@
 
 <h1> /wiki/formulas </h1>
 <span>Est: 2021/07/04 22:04:16<br></span>
-<span>Mod: Invalid DateTime</span>
 
+
+<h3>Object Rotation Around Midpoint</h3>
+<pre><code>/* Convert to degrees */
+double angle = radians * 180 / PI;
+
+/* rotate around origin point */
+double dx = ox + cos(angle)*radius;
+double dy = oy + sin(angle)*radius;
+</code></pre>
+<h3>Midpoint Circle Algorithm</h3>
+<p>int diam = (radius * 2);</p>
+<p>int x = radius - 1;
+int y = 0;
+int tx = 1;
+int ty = 1;
+int error = tx - diam;</p>
+<p>while (x &gt;= y)
+{</p>
+<pre><code>SDL_RenderDrawPoint(gRen, cx + x, cy + y);
+SDL_RenderDrawPoint(gRen, cx + x, cy - y);
+SDL_RenderDrawPoint(gRen, cx - x, cy + y);
+SDL_RenderDrawPoint(gRen, cx - x, cy - y);
+SDL_RenderDrawPoint(gRen, cx + y, cy - x);
+SDL_RenderDrawPoint(gRen, cx + y, cy + x);
+SDL_RenderDrawPoint(gRen, cx - y, cy - x);
+SDL_RenderDrawPoint(gRen, cx - y, cy + x);
+
+if (error &lt;= 0)
+
+{
+  ++y;
+  error += ty;
+  ty += 2;
+}
+
+if( error &gt; 0)
+{
+  --x;
+  tx += 2;
+  error += (tx - diam);
+
+}
+</code></pre>
+<p>}
+}</p>
 
 
 
