@@ -1,0 +1,11 @@
+---
+layout: base.njk
+---
+
+
+<h1> /wiki/{{ title }} </h1>
+<span>Est: {{page.date | htmlDateString}}<br></span>
+<span>Mod: {{page.lastmod | htmlDateString}}</span>
+
+{{ content | safe }}
+
