@@ -2,7 +2,8 @@
 layout: wiki.njk
 title: formulas
 date: 2021-07-04T21:04:16-05:00
-lastmod: Last Modified
+lastmod: 2021-08-04T05:48:42-5:00
+lastEdit: +ft - "midpoint circle"
 ---
 
  ### Object Rotation Around Midpoint
@@ -49,8 +50,3 @@ lastmod: Last Modified
       --x;
       tx += 2;
       error += (tx - diam);
-
-    }
-
-  }
-}

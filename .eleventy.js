@@ -19,10 +19,6 @@ module.exports = function (eleventyConfig) {
         return DateTime.fromJSDate(dateObj).toFormat('yyyy/MM/dd');
     });
 
-    eleventyConfig.addFilter('pub_lastmod', dateObj => {
-        return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy/MM/dd, TT')
-      })
-
     return {
         dir: {
             input: "src",
