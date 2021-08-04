@@ -1,9 +1,11 @@
 ---
 layout: index.njk
-title: home
+title: /home
 ---
 
 # {{ title }}
+
+<hr/>
 
 ## About
 Welcome,

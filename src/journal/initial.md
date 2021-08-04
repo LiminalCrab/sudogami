@@ -1,5 +1,5 @@
 ---
-title: Inital Entry
+title: initial
 ---
 
 Hello World
