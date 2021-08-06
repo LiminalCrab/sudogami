@@ -1,6 +1,7 @@
 ---
 title: starlamp
 date: 2021-08-04T09:55:23-05:00
+lastmod: 2021-08-06T15:23:27-05:00
 ---
 
 Starlamp is a portfolio concious image gallery application using Django and Postgresql as its backend. The goal of the application is to be able to easily manage the content of your portfolio.
