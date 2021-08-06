@@ -57,38 +57,75 @@
                 </section>
             </div>
         </header>
-        
-<div class="main-content">
-<h1>/journal</h1>
-<hr/>
+        <div class="entry-content">
+    <h1> START starlamp [2021/08/04 10:55:23] </h1>
+            <p>Starlamp is a portfolio concious image gallery application using Django and Postgresql as its backend. The goal of the application is to be able to easily manage the content of your portfolio.</p>
+<p><strong>Backend</strong> - Django / Postgresql</p>
+<p><strong>Frontend</strong> - Vue.js</p>
+<h2>User Creation</h2>
+<p>The first user created will be the primary administator account.</p>
+<h2>Administration Interface</h2>
+<p>The Administrator interface for Starlamp will allow the user to upload, modify, and delete content.</p>
+<h3>Uploading Content</h3>
+<p>Uploading content will be done in two of ways. Dragging and dropping groups of / or single images onto the page, or through the filesystem browser. Uploading multiple files will reveal a secondary UI element in the left hand sidebar, it will show the upload progress of each file. File uploads will be done starting from the smallest to largest file.</p>
+<h3>Detailing Content</h3>
+<p>While files are uploading, the administrator will be capable of outlining the &quot;description&quot; of each file, the tags and album it belongs to, an upload date will be assigned after the upload is completed successfully.</p>
+<ul>
+<li>Description
+<ul>
+<li>Not required</li>
+<li>2,500 characters max.</li>
+</ul>
+</li>
+<li>Tags
+<ul>
+<li>Created at will by the administrator</li>
+<li>delineated by a pound sign.</li>
+</ul>
+</li>
+<li>Upload Date
+<ul>
+<li>Default YYYY/MM/DD HH:MM (24 hour time)</li>
+</ul>
+</li>
+<li>Uploaded by
+<ul>
+<li>Administrator's username.</li>
+</ul>
+</li>
+</ul>
+<h3>Album</h3>
+<p>Albumns will be a group of posts, with one image selected as a thumbnail. Clicking this image will send the user to the directory of the album in which all the posts in that album will be revealed.</p>
+<h2>PG SCHEMA</h2>
+<h3>User register</h3>
+<ul>
+<li>id (autogen)  &gt; pg_table | sl_users &gt; pg_row | id</li>
+<li>*username     &gt; pg_table | sl_users &gt; pg_row | username</li>
+<li>*password     &gt; pg_table | sl_users &gt; pg_row | password</li>
+<li>*secretkey    &gt; pg_table | sl_users &gt; pg_row | key</li>
+<li>*flags        &gt; pg_table | sl_users &gt; pg_row | flags</li>
+</ul>
+<h3>Image upload</h3>
 <ul>
 <li>
-<p><a href="/journal/auger/">auger</a>
-// 2021/03/12  -&gt; Edited: 2021/08/02</p>
+<p>User generated</p>
+<ul>
+<li>event | creator &gt; pg_table | sl_gallery_posts &gt; post_uploader</li>
+<li>event | title   &gt; pg_table | sl_gallery_posts &gt; post_title</li>
+<li>event | desc    &gt; pg_table | sl_gallery_posts &gt; post_description</li>
+<li>event | tag     &gt; pg_table | sl_gallery_posts &gt; post_tag</li>
+</ul>
 </li>
 <li>
-<p><a href="/journal/sudogami/">sudogami</a>
-// 2021/03/12  -&gt; Edited: 2021/08/04</p>
-</li>
-<li>
-<p><a href="/journal/sidg64/">sidg64</a>
-// 2021/05/19  -&gt; Edited: 2021/06/19</p>
-</li>
-<li>
-<p><a href="/journal/initial/">initial</a>
-// 2021/05/25</p>
-</li>
-<li>
-<p><a href="/journal/apsis/">apsis</a>
-// 2021/06/29  -&gt; Edited: 2021/08/04</p>
-</li>
-<li>
-<p><a href="/journal/starlamp/">starlamp</a>
-// 2021/08/04</p>
+<p>Server generated</p>
+<ul>
+<li>event | date   &gt; postgres | sl_gallery_posts &gt; post_date</li>
+</ul>
 </li>
 </ul>
 
 </div>
+
     </body>
     <footer> 
     <hr />

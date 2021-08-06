@@ -46,15 +46,19 @@ img.animated-gif
 
 /* WIKI STUFF */
 
-.wiki-content{
+.entry-content{
     line-height: 20px;
     min-width: 1000px;
     max-width: 1200px;
     overflow: hidden;
 }
 
-.wiki-content p{
+.entry-content p{
     font-size: 17px;
+}
+
+.entry-content ul{
+    margin:0px 0px 5px 0px;
 }
 
 .site-cite{
@@ -63,23 +67,6 @@ img.animated-gif
 
 .article-cite{
     color: rgb(119, 119, 119);
-}
-
-
-/* JOURNAL STUFF */
-.journal-list ul{
-    /*column-count: 3;*/
-    list-style-type: none;
-    line-height: 30px;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-}
-
-.journal-list a{
-    font-weight: bold;
-    font-size: 18px;
-    text-decoration: none;
-    color: rgb(102, 102, 102);
 }
 
 /* GLOBALS */
