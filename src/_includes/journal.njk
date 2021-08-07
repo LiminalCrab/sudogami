@@ -1,8 +1,13 @@
 ---
 layout: base.njk
 ---
-<div class="main-content">
-<h3> START {{ title }} [{{ page.date | htmlDateString }}] </h1>
+    <div class="wiki-content">
+        <h2>{{ title }} </h2>
+        <b>st:</b>[{{ page.date | htmlDateString }}]<br>
 
-{{ content | safe }}
+         {% if lastmod %}
+        <b>md:</b>[{{ lastmod | htmlDateString }}]
+         {% endif %}
+
+        {{ content | safe }}
 </div>

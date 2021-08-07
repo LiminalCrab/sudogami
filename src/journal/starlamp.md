@@ -1,7 +1,7 @@
 ---
 title: starlamp
 date: 2021-08-04T09:55:23-05:00
-lastmod: 2021-08-06T15:23:27-05:00
+lastmod: 2021-08-07T17:49:37-05:00
 ---
 
 Starlamp is a portfolio concious image gallery application using Django and Postgresql as its backend. The goal of the application is to be able to easily manage the content of your portfolio.
@@ -36,3 +36,14 @@ While files are uploading, the administrator will be capable of outlining the "d
 ### Album
 Albumns will be a group of posts, with one image selected as a thumbnail. Clicking this image will send the user to the directory of the album in which all the posts in that album will be revealed.
 
+### Completed Tasks 2021/08/07 1757
+  - Configured Django and Vue3 to work together.
+  
+#### Notes
+
+Vue3 and Django configured together.
+Primary frontend file example is named test.html in the gallery/template directory.
+
+Static development files are in the /static/ directory.
+
+Static deployment files are in the /var/ directory.
