@@ -8,10 +8,10 @@ It will track the following diciplines.
 
 # Disciplines 
 
-Backend
-Frontend
-Database
-Software
-System
-Design
-Information
+* Backend
+* Frontend
+* Database
+* Software
+* System
+* Design
+* Information
