@@ -71,6 +71,10 @@ img.animated-gif
     font-size: 25px;
 }
 
+.wiki-content h4{
+    font-size: 20px;
+}
+
 .wiki-content ul{
     margin: 0px 0px 25px 0px ;
 }
