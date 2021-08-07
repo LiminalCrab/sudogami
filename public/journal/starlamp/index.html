@@ -58,13 +58,45 @@
             </div>
         </header>
         <div class="main-content">
-<h3> START apsis [2021/06/29 22:20:00] </h1>
+<h3> START starlamp [2021/08/04 10:55:23] </h1>
 
-<p>Apsis is a distrubted metronome, the goal of the project is to keep separated artists performing over livestreams synchronized using a global pulse signal and a time synchronization server. It will require the group to pick a leader to start the music while not being able to hear the others, and after the rest of the group picks who they want to hear when playing along, so long as it's not circular dependancy. The lead starts playing with the the metronome and his audio + metronome will be sent to whoever needs to listen to him while playing in a typical dependency chain resolution fashion. So long as there isn't any circular dependency, the group will maintain synchrony.</p>
-<h3>CONTINUE apsis | 1:proto_ui [2021/06/29 1252]</h3>
-<p>Actively working on getting the phasor offset to work so that it stops jumping everytime the BPM increases. Afterwards I'll need to get the ticking setup and the UI prototype will be good to go.</p>
-<h3>CONTINUE apsis | 2:starlamp [2021/08/07 1005]</h3>
-<p>I have to complete a project for a friend. I will return to this as soon as this is complete. I'll stick work on it here and there.</p>
+<p>Starlamp is a portfolio concious image gallery application using Django and Postgresql as its backend. The goal of the application is to be able to easily manage the content of your portfolio.</p>
+<p><strong>Backend</strong> - Django / Postgresql</p>
+<p><strong>Frontend</strong> - Vue.js</p>
+<h2>User Creation</h2>
+<p>The first user created will be the primary administator account.</p>
+<h2>Administration Interface</h2>
+<p>The Administrator interface for Starlamp will allow the user to upload, modify, and delete content.</p>
+<h3>Uploading Content</h3>
+<p>Uploading content will be done in two of ways. Dragging and dropping groups of / or single images onto the page, or through the filesystem browser. Uploading multiple files will reveal a secondary UI element in the left hand sidebar, it will show the upload progress of each file. File uploads will be done starting from the smallest to largest file.</p>
+<h3>Detailing Content</h3>
+<p>While files are uploading, the administrator will be capable of outlining the &quot;description&quot; of each file, the tags and album it belongs to, an upload date will be assigned after the upload is completed successfully.</p>
+<ul>
+<li>Description
+<ul>
+<li>Not required</li>
+<li>2,500 characters max.</li>
+</ul>
+</li>
+<li>Tags
+<ul>
+<li>Created at will by the administrator</li>
+<li>delineated by a pound sign.</li>
+</ul>
+</li>
+<li>Upload Date
+<ul>
+<li>Default YYYY/MM/DD HH:MM (24 hour time)</li>
+</ul>
+</li>
+<li>Uploaded by
+<ul>
+<li>Administrator's username.</li>
+</ul>
+</li>
+</ul>
+<h3>Album</h3>
+<p>Albumns will be a group of posts, with one image selected as a thumbnail. Clicking this image will send the user to the directory of the album in which all the posts in that album will be revealed.</p>
 
 </div>
 

@@ -9,3 +9,7 @@ Apsis is a distrubted metronome, the goal of the project is to keep separated ar
 ### CONTINUE apsis | 1:proto_ui [2021/06/29 1252]
 
 Actively working on getting the phasor offset to work so that it stops jumping everytime the BPM increases. Afterwards I'll need to get the ticking setup and the UI prototype will be good to go.
+
+### CONTINUE apsis | 2:starlamp [2021/08/07 1005]
+
+I have to complete a project for a friend. I will return to this as soon as this is complete. I'll stick work on it here and there.
