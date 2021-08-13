@@ -10,9 +10,6 @@ Starlamp is a portfolio concious image gallery application using Django and Post
 
 **Frontend** - Vue.js 
 
-### User Creation
-The first user created will be the primary administator account. 
-
 ### Administration Interface
 The Administrator interface for Starlamp will allow the user to upload, modify, and delete content.
 
@@ -27,7 +24,7 @@ While files are uploading, the administrator will be capable of outlining the "d
   - 2,500 characters max.
 - Tags
   - Created at will by the administrator 
-  - delineated by a pound sign.
+  - marked with a pound sign.
 - Upload Date
   - Default YYYY/MM/DD HH:MM (24 hour time)
 - Uploaded by
@@ -36,14 +33,7 @@ While files are uploading, the administrator will be capable of outlining the "d
 #### Album
 Albumns will be a group of posts, with one image selected as a thumbnail. Clicking this image will send the user to the directory of the album in which all the posts in that album will be revealed.
 
-#### Completed Tasks 2021/08/07 1757
-  - Configured Django and Vue3 to work together.
-  
-#### Notes
-
-Vue3 and Django configured together.
-Primary frontend file example is named test.html in the gallery/template directory.
+#### Note
 
 Static development files are in the /static/ directory.
-
 Static deployment files are in the /var/ directory.

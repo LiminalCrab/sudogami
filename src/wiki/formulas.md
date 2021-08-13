@@ -6,7 +6,7 @@ lastmod: 2021-08-04T05:48:42-5:00
 lastEdit: +ft - "midpoint circle"
 ---
 
- ### Object Rotation Around Midpoint
+### Object Rotation Around Midpoint
 
     /* Convert to degrees */
     double angle = radians * 180 / PI;

@@ -12,4 +12,4 @@ Actively working on getting the phasor offset to work so that it stops jumping e
 
 ### CONTINUE apsis | 2:starlamp [2021/08/07 1005]
 
-I have to complete a project for a friend. I will return to this as soon as this is complete. I'll stick work on it here and there.
+I'm switching back over to Starlamp for the time being, especially since Vue 3 feels a lot more complete, definitely want to give it a try.
