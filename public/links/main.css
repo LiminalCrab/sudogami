@@ -142,8 +142,8 @@ ul { margin:0px 0px 45px 0px; }
         max-width: 100%;
         overflow: hidden;
     }
-    .recent-entries {
-        display: none;
+    .dirent-list{
+        font-size: 15px;
     }
     .centered {
         display: block;
@@ -176,6 +176,9 @@ ul { margin:0px 0px 45px 0px; }
         margin-left: auto;
         margin-right: auto;
         height: 50%;
+    }
+    .dirent-list{
+        font-size: 18px;
     }
 
 }
