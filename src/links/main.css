@@ -99,37 +99,44 @@ ul { margin:0px 0px 45px 0px; }
 
 
 /* Mobile */
-@media (max-width: 1100px){
-    nav { width: 100% }
-    nav .side-nav-menu section { float: left; margin: 0 10px 10px 0; }
+@media (max-width: 1281px){
+    nav { width: 100% 
+    }
+    nav .side-nav-menu section { 
+        float: left; 
+        margin: 0 10px 10px 0; 
+    }
     .main-content { 
-        width: 67%;
+        width: 60%;
         margin-right: 250%;
     }
 }
 
-@media (max-width: 1100px) and (min-width: 651px) {
-    nav .side-nav-menu section { width: calc(25% - 10px); }
-    nav .side-nav-menu section:nth-child(4n + 1) { clear: left; }
-    footer{
+@media (max-width: 1025px) and (min-width: 651px) {
+    nav .side-nav-menu section { 
+        width: calc(25% - 10px); 
+    }
+    nav .side-nav-menu section:nth-child(4n + 1) { 
+        clear: left; 
+    }
+    footer {
         font-size: 12px;
         max-width: 50%;
         min-width: 70%;
-
     }
-    .centered{
+    .centered {
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
-    .wiki-content{
+    .wiki-content {
         max-width: 50%;
         min-width: 30%;
         overflow: hidden;
     }
 }
 
-@media (max-width: 790px ){
+@media (max-width: 961px ) {
     nav .site-nav section { width: calc(33% - 10px); }
     nav .site-nav section:nth-child(3n + 1) { clear: left; }
     nav { 
@@ -137,12 +144,12 @@ ul { margin:0px 0px 45px 0px; }
         margin-left: auto;
         margin-right: auto;
         width: 250px; }
-        footer{
-            font-size: 12px;
-            max-width: 70%;
-            min-width: 65%;
-    
-        }
+
+    footer {
+        font-size: 12px;
+        max-width: 70%;
+        min-width: 65%;
+    }
     .main-content { 
         width: 60%;
         padding-bottom: 75%;
@@ -151,10 +158,10 @@ ul { margin:0px 0px 45px 0px; }
         max-width: 30%;
         overflow: hidden;
     }
-    .recent-entries{
+    .recent-entries {
         display: none;
     }
-    .centered{
+    .centered {
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -164,33 +171,41 @@ ul { margin:0px 0px 45px 0px; }
 }
 
 
-@media (max-width: 667px ){
-    nav .site-nav section { width: calc(33% - 10px); }
-    nav .site-nav section:nth-child(3n + 1) { clear: left; }
-    nav { 
+@media (max-width: 641px ){
+    nav .site-nav section { 
+        width: calc(33% - 10px); 
+    }
+    nav .site-nav section:nth-child(3n + 1) { 
+        clear: left;
+    }
+    nav {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 250px; }
-        footer{
-            font-size: 12px;
+        width: 250px; 
+    }
+    footer {
+            font-size: 10px;
             max-width: 100%;
             min-width: 90%;
-    
         }
+
     .main-content { 
-        width: 60%;
+        width: 80%;
         padding-bottom: 75%;
+        line-height: 15px;
     }
-    .wiki-content{
-        max-width: 50%;
-        min-width: 30%;
+
+    .wiki-content {
+        max-width: 70%;
+        min-width: 10%;
         overflow: hidden;
     }
-    .journal-list{
+
+    .journal-list {
         width: 80%;
     }
-    .centered{
+    .centered {
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -199,19 +214,20 @@ ul { margin:0px 0px 45px 0px; }
 
 }
 
-@media (max-width: 650px) and (min-width: 501px) {
+@media (max-width: 481px) {
     nav .site-nav section { width: calc(33% - 10px); }
     nav .site-nav section:nth-child(3n + 1) { clear: left; }
-    nav ul{ 
+    nav ul { 
         display: block;
         margin-left: auto;
         margin-right: auto;
         width: 200px; }
-    footer{
+
+    footer {
         font-size: 10px;
         max-width: 80%;
         min-width: 20%; }
-    .wiki-content{
+    .wiki-content {
         max-width: 100%;
         min-width: 15%;
         overflow: hidden;
@@ -220,12 +236,12 @@ ul { margin:0px 0px 45px 0px; }
         display:none;
     }
 
-    .m-img{
+    .m-img {
         height: auto;
         width: 230px;
     }
 
-    .centered{
+    .centered {
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -234,71 +250,30 @@ ul { margin:0px 0px 45px 0px; }
 
 }
 
-@media (max-width: 500px) and (min-width: 351px) {
-    nav .site-nav section { width: calc(50% - 10px); }
-    nav .site-nav section:nth-child(2n + 1) { clear: left; }
-    nav ul{ 
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 200px; }
-
-    footer{
-        font-size: 10px;
-        max-width: 80%;
-        min-width: 20%; }
-    
-    h1 {
-        font-size: 25px;
-    }
-    .main-content{
-        display: none;
-    }
-
-    .wiki-content{
-        padding-left: 30px;
-        max-width: 100%;
-        min-width: 45%;
-        overflow: hidden;
-    }
-
-    .m-img{
-        height: auto;
-        width: 300px;
-    }
-    
-    
-    .centered{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        height: 50%;
-    }
-}
-
-@media (max-width: 350px) {
+@media (max-width: 320px) {
     nav .site-nav section { width: 100%; }
 
     footer{
         font-size: 10px;
         max-width: 75%;
-        min-width: 70%; }
+        min-width: 70%;
+    }
 
     .main-content { 
         display:none;
     }
-    .wiki-content{
+    .wiki-content {
         padding-left: 30px;
         max-width: 100%;
         min-width: 45%;
         overflow: hidden;
     }
-    .m-img{
+    .m-img {
         height: auto;
         width: 130px;
     }
     
-    .centered{
+    .centered {
         display: block;
         margin-left: auto;
         margin-right: auto;

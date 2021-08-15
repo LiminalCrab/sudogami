@@ -1,5 +1,5 @@
 [
-    {"text": "Home", "url": "/home/"},
-    {"text": "Journal", "url": "/journal/"},
-    {"text": "Travel", "url": "/travel/"}
+    {"text": "Home", "url": "/index.html"},
+    {"text": "Journal", "url": "/journal.html"},
+    {"text": "Travel", "url": "/travel.html"}
 ]
