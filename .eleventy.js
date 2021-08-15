@@ -6,6 +6,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/links");
     eleventyConfig.addWatchTarget("./src/links");
 
+
     //favicons/media
     eleventyConfig.addPassthroughCopy("./src/media");
     eleventyConfig.addWatchTarget("./src/media");
