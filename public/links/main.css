@@ -112,7 +112,7 @@ ul { margin:0px 0px 45px 0px; }
 @media (max-width: 1025px) and (min-width: 651px) {
     footer {
         font-size: 12px;
-        max-width: 50%;
+        max-width: 100%;
         min-width: 70%;
     }
     .centered {
@@ -121,8 +121,8 @@ ul { margin:0px 0px 45px 0px; }
         margin-right: auto;
     }
     .wiki-content {
-        max-width: 50%;
-        min-width: 30%;
+        max-width: 100%;
+        min-width: 5%;
         overflow: hidden;
     }
 }
