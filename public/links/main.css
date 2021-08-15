@@ -121,7 +121,6 @@ ul { margin:0px 0px 45px 0px; }
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 50%;
     }
     .wiki-content{
         max-width: 50%;
@@ -159,7 +158,7 @@ ul { margin:0px 0px 45px 0px; }
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 50%;
+        height: 50%;
     }
 
 }
@@ -176,7 +175,7 @@ ul { margin:0px 0px 45px 0px; }
         footer{
             font-size: 12px;
             max-width: 100%;
-            min-width: 95%;
+            min-width: 90%;
     
         }
     .main-content { 
@@ -195,7 +194,7 @@ ul { margin:0px 0px 45px 0px; }
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 50%;
+        height: 50%;
     }
 
 }
@@ -230,7 +229,7 @@ ul { margin:0px 0px 45px 0px; }
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 50%;
+        height: 50%;
     }
 
 }
@@ -273,7 +272,7 @@ ul { margin:0px 0px 45px 0px; }
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 50%;
+        height: 50%;
     }
 }
 
@@ -303,6 +302,6 @@ ul { margin:0px 0px 45px 0px; }
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 50%;
+        height: 50%;
     }
 }
