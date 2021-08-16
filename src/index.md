@@ -1,6 +1,6 @@
 ---
 layout: index.njk
-title: /home
+title: Home
 ---
 
 # {{ title }}

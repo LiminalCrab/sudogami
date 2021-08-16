@@ -1,6 +1,6 @@
 ---
 layout: direct.njk
-title: /journal
+title: Journal
 ---
 
 # {{ title }}

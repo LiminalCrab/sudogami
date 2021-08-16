@@ -1,6 +1,6 @@
 ---
 layout: direct.njk
-title: /travel
+title: Travel
 ---
 
 # {{ title }}

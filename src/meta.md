@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: meta
+title: Meta
 ---
 {% for page in collections.journal %}
 - [{{ page.data.title }}]({{ page.url }})
