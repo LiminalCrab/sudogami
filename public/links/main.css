@@ -1,235 +1,51 @@
-.side-nav-menu{
-    float: left;
-    height: 100%;
-    width: 250px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left:15px ;
-    font-family: monospace; 
-    font-size: 16px;
-    max-width: 570px;
-}
+  .main-head {
+      grid-area: header;
+  }
 
-.main-content{
-    height: 350px;
-    width: 60%;
-    padding-top: 20px;
-    margin-left: 250px;
-    font-family: monospace;
-    font-size: 20px;
-    max-width: 1100px;
+  .content {
+      grid-area: content;
+  }
 
-}
+  .main-nav {
+      grid-area: nav;
+  }
 
-img.animated-gif
-{
-  width: 820px;
-  height: 520px;
-}
+  .main-footer {
+      grid-area: footer;
+  }
 
-.main-content > span{
-    font-size: 14px;
-}
+  .wrapper {
+      display: grid;
+      gap: 20px;
+      grid-template-areas: "header" "nav" "content" "footer";
+  }
 
-.main-content > p{
-    font-size: 14px;
-    line-height: 20px;
-}
+  @media (min-width: 700px) {
+    .wrapper {
+      grid-template-columns: 1fr 4fr 1fr;
+      grid-template-areas:
+        "header header  header"
+        "nav    content sidebar"
+        "nav    content content"
+        "footer footer  footer"
+     }
+     nav ul {
+       flex-direction: column;
+     }
+  }
+  
 
-.main-content a{
-    color: rgb(119, 119, 119);
-}
-
-.main-content a:visited{
-    color: rgb(119, 119, 119);
-}
-
-/* WIKI STUFF */
-
-.wiki-content{
-    font-family: monospace;
-    font-size: 15px;
-    line-height: 20px;
-    min-width: 1000px;
-    max-width: 1200px;
-    overflow: hidden;
-}
-
-.wiki-content p{
-    font-size: 18px;
-}
-
-.wiki-content h1{
-    font-size: 45px;
-}
-
-.wiki-content h2{
-    font-size: 35px;
-}
-
-.wiki-content h3{
-    font-size: 25px;
-}
-
-.wiki-content h4{
-    font-size: 20px;
-}
-
-.wiki-content ul{
-    margin: 0px 0px 25px 0px ;
-}
-
-.site-cite{
-    color: black
-}
-
-.article-cite{
-    color: rgb(119, 119, 119);
-}
-
-/* GLOBALS */
-
-footer { line-height: 30px; clear:both; padding:45px; }
-footer hr { margin-bottom: 15px }
-
-a { color: rgb(75, 77, 76); }
-a:visited { color: rgb(68, 68, 68); }
-
-ul { margin:0px 0px 45px 0px; }
-
-
-/* Mobile */
-@media (max-width: 1281px){
-    .main-content { 
-        width: 60%;
-        margin-right: 250%;
-    }
-    .wiki-content h3{
-        font-size: 15px;
-    }
-}
-
-@media (max-width: 1025px) and (min-width: 651px) {
-    footer {
-        font-size: 12px;
-        max-width: 100%;
-        min-width: 70%;
-    }
-    .centered {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .wiki-content {
-        max-width: 100%;
-        min-width: 5%;
-        overflow: hidden;
-    }
-}
-
-@media (max-width: 961px ) {
-    footer {
-        font-size: 12px;
-        max-width: 100%;
-        min-width: 45%;
-    }
-    .main-content { 
-        max-width: 100%;
-        min-width: 30%;
-        padding-bottom: 75%;
-    }
-    .wiki-content{
-        max-width: 100%;
-        overflow: hidden;
-    }
-    .dirent-list{
-        font-size: 15px;
-    }
-    .centered {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        height: 50%;
-    }
-
-}
-
-
-@media (max-width: 641px ){
-    footer {
-        font-size: 10px;
-        max-width: 100%;
-        min-width: 90%;
-    }
-    .main-content { 
-        width: 100%;
-        padding-bottom: 75%;
-        line-height: 15px;
-    }
-    .wiki-content {
-        max-width: 100%;
-        min-width: 10%;
-        overflow: hidden;
-    }
-    .centered {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        height: 50%;
-    }
-    .dirent-list{
-        font-size: 18px;
-    }
-
-}
-
-@media (max-width: 481px) {
-    footer {
-        font-size: 6px;
-        max-width: 100%;
-        min-width: 5%; 
-    }
-    .wiki-content {
-        max-width: 100%;
-        min-width: 15%;
-        overflow: hidden;
-    }
-    .main-content { 
-        display:none;
-    }
-    section #directory{
-        display: none;
-    }
-    .centered {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        height: 50%;
-    }
-
-}
-
-@media (max-width: 320px) {
-    nav .site-nav section { width: 100%; }
-
-    footer{
-        font-size: 10px;
-        max-width: 75%;
-        min-width: 70%;
-    }
-    .main-content { 
-        display:none;
-    }
-    .wiki-content {
-        padding-left: 30px;
-        max-width: 100%;
-        min-width: 45%;
-        overflow: hidden;
-    }
-    .centered {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        height: 50%;
-    }
-}
+  @media (min-width: 500px) {
+      .wrapper {
+          grid-template-columns: 1fr 3fr;
+          grid-template-areas: 
+          "header header" 
+          "nav nav" 
+          "content content" 
+          "footer footer";
+      }
+      nav ul {
+          display: flex;
+          justify-content: space-between;
+      }
+  }
