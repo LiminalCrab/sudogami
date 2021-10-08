@@ -10,31 +10,29 @@
 
   .wrapper {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-auto-rows: minmax(10%, auto);
+      grid-auto-rows: minmax(5%, auto);
       grid-template-areas:
       "header header header header"
       "sidebar content content content"
       "footer footer footer footer";
-      background-color: bisque;
   }
 
   footer {
+      width: 100%;
       grid-area: footer;
-      background-color: rgb(194, 112, 112);
   }
 
   .main-nav {
+      width: 10%;
       grid-area: sidebar;
   }
 
   .content {
-      width: 90%;
+      width: 70%;
       margin: 5%;
       grid-area: content;
   }
 
   .main-head {
       grid-area: header;
-      background-color: brown;
   }
