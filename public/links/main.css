@@ -6,15 +6,21 @@
 
   ul {
       list-style: none;
+      width: 40%;
+  }
+
+  a, span, p, h1, h2, h3 {
+      font-family: monospace;
+  }
+
+  a {
+      text-decoration: none;
   }
 
   .wrapper {
       display: grid;
       grid-auto-rows: minmax(5%, auto);
-      grid-template-areas:
-      "header header header header"
-      "sidebar content content content"
-      "footer footer footer footer";
+      grid-template-areas: "header header header header" "sidebar content content content" "footer footer footer footer";
   }
 
   footer {
@@ -23,16 +29,43 @@
   }
 
   .main-nav {
-      width: 10%;
       grid-area: sidebar;
   }
 
   .content {
       width: 70%;
-      margin: 5%;
       grid-area: content;
   }
 
   .main-head {
       grid-area: header;
+  }
+
+  .top-nav {
+      display: none;
+  }
+
+  @media screen and (max-width : 760px) {
+      .wrapper { display: block;}
+      .top-nav { 
+          display: block; 
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+        }
+      .main-nav { display: none;}
+
+      .main-head {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;}
+      .content {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+      }
+
+      footer {
+          font-size: 40%;
+      }
   }
