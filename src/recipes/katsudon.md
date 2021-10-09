@@ -29,15 +29,10 @@ Gather all the ingredients. Adjust the oven rack to the middle position and preh
 **To Make Tonkatsu**
 
     Combine the panko and oil in a frying pan and toast over medium heat until golden brown. Transfer panko into a shallow dish and allow to cool.
-
     Cut the onions into thin slices and the mitsuba into small pieces.
-
     Remove the extra fat and make a couple of slits on the connective tissue between the meat and fat. The red meat and fat have different elasticity, and when they are cooked they will shrink and expand at different rates. This will allow Tonkatsu to stay nice and flat and prevent it from curling up.
-
     Pound the meat with a meat pounder, or if you don’t have one then just use the back of a knife to pound. Mold the extended meat back into the original shape with your hands.
-
     Sprinkle salt and freshly ground black pepper.
-
     Dredge each pork piece in the flour to coat completely. Pat off the excess flour.
 
     Beat one egg in a bowl and coat the pork with the beaten egg. Finally, coat with the toasted panko. Press on the panko flakes to make sure they adhere to the pork.

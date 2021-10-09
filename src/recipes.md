@@ -1,5 +1,5 @@
 ---
-layout: direct.njk
+layout: base.njk
 title: Recipes
 ---
 
