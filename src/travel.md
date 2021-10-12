@@ -6,4 +6,6 @@ title: Travel
 # {{ title }}
 <hr/>
 
-Check back later, work in progress.
+{% for page in collections.travel %}
+- [{{ page.data.title }}]({{ page.url }}) 
+{% endfor %}

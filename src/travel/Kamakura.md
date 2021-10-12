@@ -1,0 +1,5 @@
+---
+title: Kamakura
+---
+
+Placeholder
