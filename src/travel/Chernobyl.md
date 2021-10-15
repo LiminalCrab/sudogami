@@ -1,5 +1,0 @@
----
-title: Chernobyl
----
-
-Placeholder

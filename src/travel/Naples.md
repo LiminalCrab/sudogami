@@ -1,4 +1,0 @@
----
-title: Naples
----
-Placeholder

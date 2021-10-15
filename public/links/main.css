@@ -4,6 +4,10 @@
       padding: 0;
   }
 
+  .travel img {
+      width: 100%;
+  }
+
   ul {
       list-style: none;
       width: 40%;
@@ -52,9 +56,12 @@
       display: none;
   }
 
+  /* Travel Gallery */
+
+
   @media screen and (max-width: 760px) {
       a {
-          color: black;
+          color:cadetblue;
       }
       .wrapper {
           display: block;

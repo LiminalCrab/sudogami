@@ -11,6 +11,14 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/media");
     eleventyConfig.addWatchTarget("./src/media");
 
+    //travel gallery
+    eleventyConfig.addPassthroughCopy("./src/travel/gallery");
+    eleventyConfig.addWatchTarget("./src/travel/gallery");
+
+    //travel video
+    eleventyConfig.addPassthroughCopy("./src/travel/video");
+    eleventyConfig.addWatchTarget("./src/travel/video");
+
     //date
     eleventyConfig.addFilter('htmlDateString', dateObj => {
         return DateTime.fromJSDate(dateObj).toFormat('yyyy/MM/dd TT');
