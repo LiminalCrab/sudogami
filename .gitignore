@@ -68,17 +68,6 @@ coverage.xml
 .hypothesis/ 
 
 
-# Unit test / coverage reports 
-htmlcov/ 
-.tox/ 
-.coverage 
-.coverage.* 
-.cache 
-.pytest_cache/ 
-nosetests.xml 
-coverage.xml 
-*.cover 
-.hypothesis/ 
 
 # Jupyter Notebook 
 .ipynb_checkpoints 
