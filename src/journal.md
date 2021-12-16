@@ -8,5 +8,6 @@ title: Journal
 <hr/>
 
 {% for page in collections.journal %}
-- [{{ page.data.title }}]({{ page.url }}) 
+- [{{ page.data.title }}]({{ page.url }})
+
 {% endfor %}

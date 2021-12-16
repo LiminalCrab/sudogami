@@ -1,6 +1,5 @@
 [
     {"text": "Home", "url": "/index.html"},
     {"text": "Journal", "url": "/journal/index.html"},
-    {"text": "Travel", "url": "/travel/index.html"},
     {"text": "Recipes", "url":"/recipes/index.html"}
 ]
