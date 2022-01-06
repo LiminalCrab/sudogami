@@ -1,5 +1,6 @@
 [
     {"text": "Home", "url": "/index.html"},
     {"text": "Journal", "url": "/journal/index.html"},
-    {"text": "Recipes", "url":"/recipes/index.html"}
+    {"text": "Recipes", "url":"/recipes/index.html"},
+    {"text": "Wiki", "url": "/wiki/index.html"}
 ]
