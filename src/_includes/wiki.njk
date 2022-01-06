@@ -6,7 +6,7 @@ layout: base.njk
 <span>Est: {{page.date | htmlDateString}}<br></span>
 {% if lastmod %}
 <span>Mod: {{ lastmod | htmlDateString}}</span><br>
-<span>Sum: {{ lastEdit }} </span>
+<span>Sum: {{ lastEdit | htmlDateString }} </span>
 {% endif %}
 
 {{ content | safe }}

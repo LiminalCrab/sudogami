@@ -22,12 +22,8 @@ module.exports = function (eleventyConfig) {
     //date
     eleventyConfig.addFilter('htmlDateString', dateObj => {
         return DateTime.fromJSDate(dateObj).toFormat('yyyy/MM/dd TT');
-    });
-
-    eleventyConfig.addFilter('journalDateString', dateObj => {
-        return DateTime.fromJSDate(dateObj).toFormat('yyyy/MM/dd');
-    });
-
+    }); 
+    
     return {
         dir: {
             input: "src",
