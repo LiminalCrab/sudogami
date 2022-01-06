@@ -1,0 +1,90 @@
+  body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+  }
+
+  .travel img {
+      width: 100%;
+  }
+
+  ul {
+      list-style: none;
+      width: 40%;
+  }
+
+  a, span, p, h1, h2, h3 {
+      font-family: monospace;
+  }
+
+  a {
+      text-decoration: none;
+      color:cadetblue
+  }
+
+  .wrapper {
+      margin: 2%;
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas: 
+      "header header header header" 
+      "sidebar content content content" 
+      "footer footer footer footer";
+  }
+
+  footer {
+      width: 100%;
+      grid-area: footer;
+  }
+
+  .main-nav {
+      max-width: 60%;
+      grid-area: sidebar;
+  }
+
+  .content {
+      max-width: 70%;
+      grid-area: content;
+  }
+
+  .main-head {
+      grid-area: header;
+  }
+
+  .top-nav {
+      display: none;
+  }
+
+  /* Travel Gallery */
+
+
+  @media screen and (max-width: 760px) {
+      a {
+          color:cadetblue;
+      }
+      .wrapper {
+          display: block;
+      }
+      .top-nav {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+      }
+      .main-nav {
+          display: none;
+      }
+      .main-head {
+          width: 50%;
+      }
+      .content {
+          margin-left: auto;
+          margin-right: auto;
+          min-width: 90%;
+          max-width: 100%;
+      }
+      footer {
+          font-size: 40%;
+      }
+  }

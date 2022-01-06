@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Sudogami">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta rel="shortcut icon" type="image/png" href='/media/favico.png?v1' />
+    <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
+
+    <link rel="stylesheet" href="/links/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+
+        <header class="main-head">
+            <a href="/"><img src='/media/favico.png' class='centered' alt='SUDOGAMI' height='120'></a>
+        </header>
+
+        <div class="top-nav">
+            <h1>Directory</h1>
+                <ul>
+                    
+                    <li><a href="/index.html">Home</a></li>
+                    
+                    <li><a href="/journal/index.html">Journal</a></li>
+                    
+                    <li><a href="/recipes/index.html">Recipes</a></li>
+                    
+                    <li><a href="/wiki/index.html">Wiki</a></li>
+                    
+                </ul>
+                <h1>Projects</h1>
+                <ul>
+                    
+                    <li><a href="https://auger.sudogami.com/page/0.html">Auger</a></li>
+                    
+                    <li><a href="https://github.com/LiminalCrab/sidg64">Sidg64</a></li>
+                    
+                    <li><a href="https://github.com/LiminalCrab/Apsis">Apsis</a></li>
+                    
+                    <li><a href="https://github.com/LiminalCrab/starlamp_base">Starlamp</a></li>
+                    
+                    <li><a href="https://github.com/LiminalCrab/sudogami">Sudogami</a></li>
+                    
+                </ul>
+        </div>
+
+
+        <article class="content">
+
+            
+<h1> /wiki/django-rest-framework </h1>
+<span>Est: 2022/01/06 09:49:56<br></span>
+
+<span>Mod: Invalid DateTime</span><br>
+<span>Sum: +created </span>
+
+
+<h1>Serialization</h1>
+<p>A way to serialize model instances into representations.
+The process of making a streamable representation of the data
+which we can transfer over the network.</p>
+<p>Serializer calsses can also include reusable validators that are applied to the complete set of field data. These validators are included by declaring them on an inner <strong>Meta class.</strong></p>
+<h1>Deserialization</h1>
+<p>Is the reverse process for serialization. Allows parsed data to be converted back into complex types after first validating the incoming data.</p>
+<h1>Validators</h1>
+<p>When deserializing data, you always ineed to call is_valid() before attempting to access the validated data, or save an object instance.</p>
+<p>.errors property will contain a dictionary representing the resulting error messages.</p>
+<h2>.errors</h2>
+<p>Each key in the dictionary will be a field name, and the values will be lists of strings of any error message corresponding to that field.</p>
+<h2>non_field_errors</h2>
+<p>This key may also be present, and will list any general validation errors.</p>
+<p>When deserializing an list of items, errors will be returned as a list of dictionaries representing each of the derserialized items.</p>
+<h1>Token Authentication</h1>
+<p>Token authentication refers to exchanging username and password for a token that will be used in all subsequent requests so to identify the user on the server side.</p>
+<h1>Basic Authentication</h1>
+<p>HTTP Basic Authentication. Good for testing.</p>
+<h1>AUTH_USER_MODEL</h1>
+<p>https://docs.djangoproject.com/en/4.0/topics/auth/customizing/</p>
+<p>You cannot change the AUTH_USER_MODEL setting during the lifetime of a project (i.e. once you have made and migrated models that depend on it) without serious effort. It is intended to be set at the project start, and the model it refers to must be available in the first migration of the app that it lives in. See Substituting a custom User model for more details.</p>
+<p>When you define a foreign key or many-to-many relations to the user model, you should specify the custom model using the AUTH_USER_MODEL setting. For example:</p>
+<h1>MANAGERS</h1>
+<p>A Manager is the interface through which database query operations are provided to Django models.
+At least one Manager exists for every model.</p>
+<p>The way maanger lcsses work is documented in Making Queries</p>
+<h1>Signals</h1>
+<p>It's a signal dispatcher that helpes decoupled applications get notified when actions occur elsewhere in the framework.</p>
+<p>Signals allow certain senders to notify a set of receivers that some action has taken place.</p>
+<h2>Listening</h2>
+<p>To receive a signal, register a receiver function. The receiver function is called when the signal is sent.</p>
+<h1>Logger</h1>
+<p>An entry point into the logging system. Each logger is a named bucket to which messages can be written for processing.</p>
+<p>A logger is configured to have a log level. Debug, Info, Warning, ect.</p>
+<p>Each message is written to the logger as a Log Record. Each log record also has a log level indicating the severity of that specific message.</p>
+<p>A log record can also contain useful metadat that describes the event that is bieng logged. It can include a stacktrace.</p>
+<h2>Handlers</h2>
+<p>The engine that determines what happens to each message in a logger. It describes a particular logging behavior such as writing am essage to the screen, to a file, or to a network socket.</p>
+<p>Like loggers, handlers also have a log level. If the log level doesn't meet or exceed the level of the handler, it will be ignored.</p>
+<p>A logger can have multiple handlers, and each handler can have diffeerent log elvel. In this way, it's possible to provide different forms of notification.</p>
+<h2>Filters</h2>
+<p>Provide additional control over which log records are passed from a logger to handler.</p>
+<p>By default, any log message that meets log level requirements will be handled. However, by instaling a filter you can place additiona criteria on the logging process.</p>
+<h2>Formatters</h2>
+<p>Ultimately a log record needs to be rendered as text. Formatters describe the exact format of that text.</p>
+<h2>Configuring Logging</h2>
+<p>Python's logging library provides several technicuqes to configure logging.</p>
+<p>In order to configure logging. you use LOGGING to define a dictionary of logging settings. These settings describe the loggers, handlers, filters, and formatters that you want in your logging setup, the log levels and other properties we want those components to have.</p>
+<p>By default, LOGGING setting is merged with Django's default logging config.</p>
+
+
+
+
+        </article>
+    
+        <aside class="sidebar">
+            <nav class="main-nav">
+                <h1>Directory</h1>
+                <ul>
+                    
+                    <li><a href="/index.html">Home</a></li>
+                    
+                    <li><a href="/journal/index.html">Journal</a></li>
+                    
+                    <li><a href="/recipes/index.html">Recipes</a></li>
+                    
+                    <li><a href="/wiki/index.html">Wiki</a></li>
+                    
+                </ul>
+                <h1>Projects</h1>
+                <ul>
+                    
+                    <li><a href="https://auger.sudogami.com/page/0.html">Auger</a></li>
+                    
+                    <li><a href="https://github.com/LiminalCrab/sidg64">Sidg64</a></li>
+                    
+                    <li><a href="https://github.com/LiminalCrab/Apsis">Apsis</a></li>
+                    
+                    <li><a href="https://github.com/LiminalCrab/starlamp_base">Starlamp</a></li>
+                    
+                    <li><a href="https://github.com/LiminalCrab/sudogami">Sudogami</a></li>
+                    
+                </ul>
+                <h1>Communities</h1>
+                <ul>
+                    
+                    <li><a href="https://auger.sudogami.com/page/0.html">Merveilles</a></li>
+                    
+                    <li><a href="https://github.com/LiminalCrab/sidg64">Infoforcefeed</a></li>
+                    
+                    <li><a href="https://github.com/LiminalCrab/Apsis">Rooks and Kings</a></li>
+                    
+                </ul>
+                <h1>Friends</h1>
+                <ul>
+                    
+                    <li><a href="https://www.0edit.com/">Ed Harrison</a></li>
+                    
+                    <li><a href="https://pushbak.org/">pushBAK</a></li>
+                    
+                    <li><a href="https://ftrv.se/">Sigrid</a></li>
+                    
+                    <li><a href="https://100r.co/site/home.html">Hundred Rabbits</a></li>
+                    
+                    <li><a href="https://sunzenshen.github.io/">Sunzenshen</a></li>
+                    
+                    <li><a href="https://eswat.ca/">ESWAT</a></li>
+                    
+                </ul>
+                <h1>Sitemap</h1>
+                <ul>
+                    <li><a href="/meta/index.html">Meta</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <footer>
+            <hr />
+            <span style="float:right"> 0AE4 0C97 9F2D 4BB8 1B37 7941 03B1 27C3 D539 F9C5</span><span><b>SUDOGAMI</b> ©
+                2021 -
+                All rights reserved</span>
+        </footer>
+
+    </div>
+</body>
+
+</html>

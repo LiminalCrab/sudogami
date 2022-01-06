@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Sudogami">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta rel="shortcut icon" type="image/png" href='/media/favico.png?v1' />
+    <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
+
+    <link rel="stylesheet" href="/links/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+
+        <header class="main-head">
+            <a href="/"><img src='/media/favico.png' class='centered' alt='SUDOGAMI' height='120'></a>
+        </header>
+
+        <div class="top-nav">
+            <h1>Directory</h1>
+                <ul>
+                    
+                    <li><a href="/index.html">Home</a></li>
+                    
+                    <li><a href="/journal/index.html">Journal</a></li>
+                    
+                    <li><a href="/recipes/index.html">Recipes</a></li>
+                    
+                    <li><a href="/wiki/index.html">Wiki</a></li>
+                    
+                </ul>
+                <h1>Projects</h1>
+                <ul>
+                    
+                    <li><a href="https://auger.sudogami.com/page/0.html">Auger</a></li>
+                    
+                    <li><a href="https://github.com/LiminalCrab/sidg64">Sidg64</a></li>
+                    
+                    <li><a href="https://github.com/LiminalCrab/Apsis">Apsis</a></li>
+                    
+                    <li><a href="https://github.com/LiminalCrab/starlamp_base">Starlamp</a></li>
+                    
+                    <li><a href="https://github.com/LiminalCrab/sudogami">Sudogami</a></li>
+                    
+                </ul>
+        </div>
+
+
+        <article class="content">
+
+            
+<h1> /wiki/formulas </h1>
+<span>Est: 2021/07/04 22:04:16<br></span>
+
+<span>Mod: 2021/08/04 06:48:42</span><br>
+<span>Sum: +ft - &quot;midpoint circle&quot; </span>
+
+
+<h3>Object Rotation Around Midpoint</h3>
+<pre><code>/* Convert to degrees */
+double angle = radians * 180 / PI;
+
+/* rotate around origin point */
+double dx = ox + cos(angle)*radius;
+double dy = oy + sin(angle)*radius;
+</code></pre>
+<h3>Midpoint Circle Algorithm</h3>
+<p>int diam = (radius * 2);</p>
+<p>int x = radius - 1;
+int y = 0;
+int tx = 1;
+int ty = 1;
+int error = tx - diam;</p>
+<p>while (x &gt;= y)
+{</p>
+<pre><code>SDL_RenderDrawPoint(gRen, cx + x, cy + y);
+SDL_RenderDrawPoint(gRen, cx + x, cy - y);
+SDL_RenderDrawPoint(gRen, cx - x, cy + y);
+SDL_RenderDrawPoint(gRen, cx - x, cy - y);
+SDL_RenderDrawPoint(gRen, cx + y, cy - x);
+SDL_RenderDrawPoint(gRen, cx + y, cy + x);
+SDL_RenderDrawPoint(gRen, cx - y, cy - x);
+SDL_RenderDrawPoint(gRen, cx - y, cy + x);
+
+if (error &lt;= 0)
+
+{
+  ++y;
+  error += ty;
+  ty += 2;
+}
+
+if( error &gt; 0)
+{
+  --x;
+  tx += 2;
+  error += (tx - diam);
+</code></pre>
+
+
+
+
+        </article>
+    
+        <aside class="sidebar">
+            <nav class="main-nav">
+                <h1>Directory</h1>
+                <ul>
+                    
+                    <li><a href="/index.html">Home</a></li>
+                    
+                    <li><a href="/journal/index.html">Journal</a></li>
+                    
+                    <li><a href="/recipes/index.html">Recipes</a></li>
+                    
+                    <li><a href="/wiki/index.html">Wiki</a></li>
+                    
+                </ul>
+                <h1>Projects</h1>
+                <ul>
+                    
+                    <li><a href="https://auger.sudogami.com/page/0.html">Auger</a></li>
+                    
+                    <li><a href="https://github.com/LiminalCrab/sidg64">Sidg64</a></li>
+                    
+                    <li><a href="https://github.com/LiminalCrab/Apsis">Apsis</a></li>
+                    
+                    <li><a href="https://github.com/LiminalCrab/starlamp_base">Starlamp</a></li>
+                    
+                    <li><a href="https://github.com/LiminalCrab/sudogami">Sudogami</a></li>
+                    
+                </ul>
+                <h1>Communities</h1>
+                <ul>
+                    
+                    <li><a href="https://auger.sudogami.com/page/0.html">Merveilles</a></li>
+                    
+                    <li><a href="https://github.com/LiminalCrab/sidg64">Infoforcefeed</a></li>
+                    
+                    <li><a href="https://github.com/LiminalCrab/Apsis">Rooks and Kings</a></li>
+                    
+                </ul>
+                <h1>Friends</h1>
+                <ul>
+                    
+                    <li><a href="https://www.0edit.com/">Ed Harrison</a></li>
+                    
+                    <li><a href="https://pushbak.org/">pushBAK</a></li>
+                    
+                    <li><a href="https://ftrv.se/">Sigrid</a></li>
+                    
+                    <li><a href="https://100r.co/site/home.html">Hundred Rabbits</a></li>
+                    
+                    <li><a href="https://sunzenshen.github.io/">Sunzenshen</a></li>
+                    
+                    <li><a href="https://eswat.ca/">ESWAT</a></li>
+                    
+                </ul>
+                <h1>Sitemap</h1>
+                <ul>
+                    <li><a href="/meta/index.html">Meta</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <footer>
+            <hr />
+            <span style="float:right"> 0AE4 0C97 9F2D 4BB8 1B37 7941 03B1 27C3 D539 F9C5</span><span><b>SUDOGAMI</b> ©
+                2021 -
+                All rights reserved</span>
+        </footer>
+
+    </div>
+</body>
+
+</html>
