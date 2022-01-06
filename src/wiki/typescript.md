@@ -2,8 +2,7 @@
 layout: wiki.njk
 title: typescript
 date: Created
-lastmod: Last Modified
-lastEdit: +created
+lastmod: lastmod
 ---
 
 Superset of JavaScript, can be learned incrementally.
@@ -11,7 +10,7 @@ Superset of JavaScript, can be learned incrementally.
 Can be transpiled to multiple JavaScript flavors.
 
 Type annotations & Strongly typed libraries, code is automatically documented in the IDE. Refer to online documentation for libraries that you use.
-The compiler can catch bugs in advance.
+The compiler can catch bugs in advance...
 
 
 # Resources

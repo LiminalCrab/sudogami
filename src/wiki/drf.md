@@ -2,8 +2,6 @@
 layout: wiki.njk
 title: django-rest-framework
 date: Created
-lastmod: Last Modified
-lastEdit: +created
 ---
 
 # Serialization

@@ -3,11 +3,7 @@ layout: base.njk
 ---
 
 <h1> /wiki/{{ title }} </h1>
-<span>Est: {{page.date | htmlDateString}}<br></span>
-{% if lastmod %}
-<span>Mod: {{ lastmod | htmlDateString}}</span><br>
-<span>Sum: {{ lastEdit | htmlDateString }} </span>
-{% endif %}
+<span>Est: [{{ page.date | htmlDateString }}]<br></span>
 
 {{ content | safe }}
 
